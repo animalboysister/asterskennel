@@ -1,0 +1,243 @@
+@font-face {
+  font-family: 'sitelen seli kiwen asuki';
+  src: url(fonts/sitelenselikiwenasuki.ttf);
+}
+
+@font-face {
+  font-family: 'sitelen seli kiwen juniko';
+  src: url(fonts/sitelenselikiwenjuniko.ttf);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0px auto;
+  padding: 0px;
+  background-image: url("images/background.png");
+  background-color: #eeeeee;
+  background-size: 100px;
+  line-height:1.4;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  min-height: 100%;
+}
+
+h1, h2, h3 {
+  margin: 0px auto;
+  padding: 0px;
+  text-align: center;
+  line-height:1.2;
+}
+
+a {
+  color: #331c0c;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+input[type="password"] {
+  border:none;
+  background: none;
+  height: 20px;
+  width: 20px;
+}
+
+.content {
+  flex: 1;
+}
+
+.rounded-box {
+  border: 5px solid #331c0c; /* Blue border */
+  border-radius: 15px; /* Rounded corners */
+  padding: 20px; /* Inner spacing */
+  background-color: #eae0d5; /* Light gray background */
+  color: #331c0c; /* Dark text */
+  font-family: 'Trebuchet MS', sans-serif; /* Font style */
+  max-width: 650px; /* Optional: set a max width */
+  margin: 20px auto; /* Center the box horizontally */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: justify;
+}
+
+.center-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.columns {
+  display: flex;
+  align-items: flex-start; /* Align items to the top */
+  justify-content: flex-start; /* Align everything to the left */
+  gap: 10px; /* Reduced space between the image and text */
+}
+
+.image-section {
+  display: flex;
+  flex-direction: column; /* Stack the image and credit vertically */
+  align-items: center; /* Center-align the image and credit */
+  max-width: 300px; /* Ensure the image section doesn't expand too much */
+  margin-right: 10px; /* Add a little space on the right side */
+}
+
+.image-section img {
+  margin: 0; /* Remove extra margins around the image */
+  padding: 5px; /* Reduce padding above the image */
+}
+
+.text {
+  line-height: 1.6; /* Improve readability */
+  text-align: justify; /* Align text properly */
+  flex: 1; /* Allow the text to fill available space */
+}
+
+.description {
+  margin-top: 5px; /* Add some spacing above the credit */
+  font-size: 14px; /* Adjust the font size */
+  color: #331c0c; /* Optional: Set a neutral text color */
+  font-weight: bold;
+  text-decoration: none
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #eae0d5;
+  border-bottom: 5px solid #331c0c; /* Adjust the color to match your design */
+}
+
+.navbar a {
+  float: left;
+  font-size: 24px;
+  color: #0a0908;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  cursor: pointer;
+  font-size: 40px;  
+  border: none;
+  outline: none;
+  color: #0a0908;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+  background-color: #c6ac8f;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0; /* Align dropdown content to the right */
+  background-color: #eae0d5;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: #331c0c;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #c6ac8f;
+}
+
+.show {
+  display: block;
+}
+
+.social-links {
+  text-align: center;
+  background-color: #eae0d5;
+  color: #331c0c;
+  border-top: 5px solid #5e503f;
+  font-weight: bold;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-button {
+  display: inline-block;
+  background-color: #eae0d5;
+  border: 3px solid #331c0c; /* Blue border */
+  border-radius: 5px; /* Rounded corners */
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: 'Trebuchet MS', sans-serif;
+  min-width: 25px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.social-button:hover {
+  background-color: #c6ac8f;
+  color: #0a0908;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;  /* Stack elements vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center;     /* Center content horizontally */
+  gap: 10px;               /* Add some space between text and buttons */
+  padding: 10px;
+  background-color: #5e503f;
+  color: #eeeeee;
+  border-top: 5px solid #331c0c;
+}
+
+/* Footer text styling */
+.footer p {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Footer button container styling */
+.footer-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+/* Styling for footer buttons */
+.footer-button {
+  background-color: #eae0d5;
+  color: #331c0c;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Trebuchet MS', sans-serif;
+  transition: background-color 0.3s;
+}
+
+.footer-button:hover {
+  background-color: #c6ac8f;
+  color: #0a0908;
+}

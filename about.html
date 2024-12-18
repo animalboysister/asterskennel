@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aster's kennel!</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"><!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  
+  <body>
+      
+    <div class="navbar" style="display: flex; justify-content: space-between; align-items: center;">
+      <a href="/" style="font-family: 'sitelen seli kiwen asuki'; font-weight: bold; font-size: 32px">tomo soweli</a>
+      <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()" style="font-weight:bold">≡
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="/about">
+            <span style="font-family: 'sitelen seli kiwen asuki'; font-weight:bold">mi</span>
+            <span style="font-family: 'Trebuchet MS'; font-size: 20px">about me</span>
+          </a>
+          <a href="/art">
+            <span style="font-family: 'sitelen seli kiwen asuki'; font-weight:bold">sitelen</span>
+            <span style="font-family: 'Trebuchet MS'; font-size: 20px">artwork</span>
+          </a>
+          <a href="/articles">
+            <span style="font-family: 'sitelen seli kiwen asuki'; font-weight:bold">pali</span>
+            <span style="font-family: 'Trebuchet MS'; font-size: 20px">articles</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(e) {
+      if (!e.target.matches('.dropbtn')) {
+      var myDropdown = document.getElementById("myDropdown");
+        if (myDropdown.classList.contains('show')) {
+          myDropdown.classList.remove('show');
+        }
+      }
+    }
+    </script>
+    
+    <div class="content">
+      <div class="rounded-box">
+        <h1 style="font-family: 'sitelen seli kiwen juniko'">about me!</h1>
+        <p>hi, im <b>aster</b>! as you've probably already read, I'm a biromantic nonbinary non-practising non-exclusive <b>zoosexual</b>. let me explain what each of those terms mean.</p>
+        <p><b>biromantic</b> - I'm attracted to both sexes for both humans and non-human animals, as well as genderqueer and intersex people.</p>
+        <p><b>nonbinary</b> - I identify with neither the male nor female gender. I would describe my gender as being overwhelmingly agender with a small part that fluctuates between masculine and feminine, typically with a feminine lean.</p>
+        <p><b>non-practising</b> - I've never been in a non-human relationship before. I hope that one day I might get the chance, though at the moment I'm not able to care for an animal partner.</p>
+        <p><b>non-exclusive</b> - I'm attracted to both humans and non-human animals. I would say that both attractions comprise an equal portion of my sexuality.</p>
+        <p><b>zoosexual</b> - I'm attracted to non-human animals. my primary attraction is large dog breeds, though I'm also attracted to other larger animals such as horses, cattle, sheep, deer, large cats, bears, crocodillians, etc.</p>
+        <p style="text-align: center">for those of you familiar with the <a href="https://zoophilia.wiki/index.php/Zoo_Code" style="color: #331c0c; font-weight: bold; text-decoration: none">zoo code</a>:<br>ZbD/Ha0Y~16L*VG*AR2R3N-1K0/1V1hp0U0OB0D2T3G0O3S0ZP0</p>
+      </div>
+    </div>
+    
+    <footer class="footer">
+      <p style="font-family: 'Trebuchet MS'">this website is part of the <a href="https://lavender.chrysocyon.xyz/webring.html" style="color: #eeeeee; font-weight: bold; text-decoration: none">animalia webring</a></p>
+      <div class="footer-buttons">
+        <button class="footer-button"><a href="https://lavender.chrysocyon.xyz/webring.html?prev=aster" style="color: #331c0c; font-weight: bold; text-decoration: none">← back</a></button>
+        <button class="footer-button"><a href="https://lavender.chrysocyon.xyz/webring.html?random=aster" style="color: #331c0c; font-weight: bold; text-decoration: none">random</a></button>
+        <button class="footer-button"><a href="https://lavender.chrysocyon.xyz/webring.html?next=aster" style="color: #331c0c; font-weight: bold; text-decoration: none">next →</a></button>
+      </div>
+    </footer>
+      
+  </body>
+</html>
+
