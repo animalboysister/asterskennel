@@ -39,15 +39,14 @@ function submitDrawing() {
 }
 
 function sendDataToSheet(imageData, message) {
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyzwYKeYv_A3e9omMhw1wlI15HBR0K_0ua65pNmofj_2agUyPPeiwMwmW9MPY0gdVuS/exec';  // Replace with your actual Web App URL
-    const payload = { image: imageData, message: message };
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw2sGrChdXFUwM2Rfy4Q41LLV3Po-gEXvwqt1UXSiqO591flciGUkGGnr8xjEnCJhMK/exec';
+    const payload = { image: imageData, message };
 
-    // Ensure you're sending the payload as JSON and setting the correct headers
     fetch(scriptURL, {
         method: 'POST',
-        body: JSON.stringify(payload),  // Correctly stringify the data
+        body: JSON.stringify(payload),  // Send data as JSON
         headers: {
-            'Content-Type': 'application/json'  // Make sure to set the correct content-type header
+            'Content-Type': 'application/json'  // Set the correct content-type
         },
     })
     .then(response => response.json())
