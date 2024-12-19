@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aster's kennel!</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body>
+    <h1>Anonymous Drawing Box</h1>
+    <div id="controls">
+        <label for="brushSize">Brush Size:</label>
+        <input type="range" id="brushSize" min="1" max="50" value="5">
+        <label for="colorPicker">Color:</label>
+        <input type="color" id="colorPicker" value="#000000">
+    </div>
+    <canvas id="drawingCanvas" width="800" height="600"></canvas>
+    <textarea id="anonymousMessage" placeholder="Write a message..."></textarea>
+    <button id="submitDrawing">Submit</button>
+    <script src="drawbox.js"></script>
+</body>
+</html>
