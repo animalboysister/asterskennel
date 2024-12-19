@@ -39,26 +39,27 @@ function submitDrawing() {
 }
 
 function sendDataToSheet(imageData, message) {
-    const scriptURL = 'YOUR_GOOGLE_SCRIPT_URL'; // Replace with your actual Web App URL
-    const payload = { image: imageData, message };
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxJUi9wgFONbCpp6GzOg2_z4QoCvmGGrt-xiQ0QvnSaO9RSLed6xrpznNgjhGxDDtO9/exec';  // Replace with your actual Web App URL
+    const payload = { image: imageData, message: message };
 
+    // Ensure you're sending the payload as JSON and setting the correct headers
     fetch(scriptURL, {
         method: 'POST',
-        body: JSON.stringify(payload),
+        body: JSON.stringify(payload),  // Correctly stringify the data
         headers: {
-            'Content-Type': 'application/json',
+            'Content-Type': 'application/json'  // Make sure to set the correct content-type header
         },
     })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                alert('Submission successful!');
-            } else {
-                alert('Error: ' + (data.error || 'Unknown error'));
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('Failed to submit data. Check the console for details.');
-        });
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert('Submission successful!');
+        } else {
+            alert('Error: ' + (data.error || 'Unknown error'));
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Failed to submit data. Check the console for details.');
+    });
 }
