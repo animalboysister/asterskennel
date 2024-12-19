@@ -62,7 +62,7 @@ submitButton.addEventListener('click', () => {
 
 // Function to send the drawing and message to Discord via Webhook
 async function sendToDiscord(message, imageData) {
-  const webhookUrl = 'YOUR_DISCORD_WEBHOOK_URL'; // Replace with your actual Discord webhook URL
+  const webhookUrl = 'https://discord.com/api/webhooks/1319231562226602024/RiOrNJwdG2uKpeWWKE3pKFPqDVVkDWA89jOJV9okHEFUBswQig2ZkhZWiziOjzDFPXhU';
 
   // Create the payload for the webhook
   const data = {
