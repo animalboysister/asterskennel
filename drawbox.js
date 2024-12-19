@@ -60,26 +60,47 @@ submitButton.addEventListener('click', () => {
   }
 });
 
-// Function to send the drawing and message to Discord via Webhook
+async function uploadToImgur(base64Image) {
+  const clientId = 'YOUR_IMGUR_CLIENT_ID'; // Replace with your Imgur client ID
+  const url = 'https://api.imgur.com/3/image';
+
+  const formData = new FormData();
+  formData.append('image', base64Image.split(',')[1]);
+
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Authorization': `Client-ID ${clientId}`
+    },
+    body: formData
+  });
+
+  const data = await response.json();
+  if (data.success) {
+    return data.data.link; // Return the URL of the uploaded image
+  } else {
+    throw new Error('Failed to upload image to Imgur');
+  }
+}
+
 async function sendToDiscord(message, imageData) {
-  const webhookUrl = 'https://discord.com/api/webhooks/1319231562226602024/RiOrNJwdG2uKpeWWKE3pKFPqDVVkDWA89jOJV9okHEFUBswQig2ZkhZWiziOjzDFPXhU';
-
-  // Create the payload for the webhook
-  const data = {
-    content: message || "No message provided",
-    embeds: [
-      {
-        title: "Anonymous Drawing",
-        description: message || "No message provided",
-        image: {
-          url: imageData
-        }
-      }
-    ]
-  };
-
   try {
-    // Send the POST request to the webhook
+    const imageUrl = await uploadToImgur(imageData); // Upload the image to Imgur
+    const webhookUrl = 'https://discord.com/api/webhooks/1319231562226602024/RiOrNJwdG2uKpeWWKE3pKFPqDVVkDWA89jOJV9okHEFUBswQig2ZkhZWiziOjzDFPXhU';
+
+    const data = {
+      content: message || "No message provided",
+      embeds: [
+        {
+          title: "Anonymous Drawing",
+          description: message || "No message provided",
+          image: {
+            url: imageUrl // Use the Imgur URL
+          }
+        }
+      ]
+    };
+
     const response = await fetch(webhookUrl, {
       method: 'POST',
       headers: {
