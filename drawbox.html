@@ -8,16 +8,68 @@
     <link href="style.css" rel="stylesheet" type="text/css" media="all">
 </head>
 <body>
-    <h1>Anonymous Drawing Box</h1>
-    <div id="controls">
+      <div class="navbar" style="display: flex; justify-content: space-between; align-items: center;">
+      <a href="/" style="font-family: 'sitelen seli kiwen asuki'; font-weight: bold; font-size: 32px">tomo soweli</a>
+    
+      <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()" style="font-weight:bold">≡
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="/about">
+            <span style="font-family: 'sitelen seli kiwen asuki'; font-weight:bold">mi</span>
+            <span style="font-family: 'Trebuchet MS'; font-size: 20px">about me</span>
+          </a>
+          <a href="/art">
+            <span style="font-family: 'sitelen seli kiwen asuki'; font-weight:bold">sitelen</span>
+            <span style="font-family: 'Trebuchet MS'; font-size: 20px">artwork</span>
+          </a>
+          <a href="/articles">
+            <span style="font-family: 'sitelen seli kiwen asuki'; font-weight:bold">pali</span>
+            <span style="font-family: 'Trebuchet MS'; font-size: 20px">articles</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(e) {
+      if (!e.target.matches('.dropbtn')) {
+      var myDropdown = document.getElementById("myDropdown");
+        if (myDropdown.classList.contains('show')) {
+          myDropdown.classList.remove('show');
+        }
+      }
+    }
+    </script>
+  
+  <div class="content">
+    <div class="rounded-box">
+      <h1 style="font-family: 'sitelen seli kiwen juniko'">anonymous drawbox!</h1>
+  
+      <canvas id="drawingCanvas" width="600" height="400"></canvas>
+  
+      <div class="controls">
         <label for="brushSize">Brush Size:</label>
         <input type="range" id="brushSize" min="1" max="50" value="5">
-        <label for="colorPicker">Color:</label>
-        <input type="color" id="colorPicker" value="#000000">
+        
+        <label for="brushColor">Brush Color:</label>
+        <input type="color" id="brushColor" value="#000000">
+  
+        <label for="message">Anonymous Message:</label>
+        <textarea id="message" placeholder="Write a message..."></textarea>
+  
+        <button id="submitDrawing">Submit Drawing</button>
+      </div>
     </div>
-    <canvas id="drawingCanvas" width="800" height="600"></canvas>
-    <textarea id="anonymousMessage" placeholder="Write a message..."></textarea>
-    <button id="submitDrawing">Submit</button>
-    <script src="drawbox.js"></script>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
