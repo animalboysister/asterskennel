@@ -39,7 +39,7 @@ function submitDrawing() {
 }
 
 function sendDataToSheet(imageData, message) {
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxJUi9wgFONbCpp6GzOg2_z4QoCvmGGrt-xiQ0QvnSaO9RSLed6xrpznNgjhGxDDtO9/exec';  // Replace with your actual Web App URL
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyzwYKeYv_A3e9omMhw1wlI15HBR0K_0ua65pNmofj_2agUyPPeiwMwmW9MPY0gdVuS/exec';  // Replace with your actual Web App URL
     const payload = { image: imageData, message: message };
 
     // Ensure you're sending the payload as JSON and setting the correct headers
