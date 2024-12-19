@@ -62,14 +62,15 @@ submitButton.addEventListener('click', () => {
 
 // Function to send the drawing and message to Discord via Webhook
 async function sendToDiscord(message, imageData) {
-  const webhookUrl = 'https://canary.discord.com/api/webhooks/1319231562226602024/RiOrNJwdG2uKpeWWKE3pKFPqDVVkDWA89jOJV9okHEFUBswQig2ZkhZWiziOjzDFPXhU';
+  const webhookUrl = 'YOUR_DISCORD_WEBHOOK_URL'; // Replace with your actual Discord webhook URL
 
+  // Create the payload for the webhook
   const data = {
-    content: message,
+    content: message || "No message provided",
     embeds: [
       {
         title: "Anonymous Drawing",
-        description: message ? message : "No message",
+        description: message || "No message provided",
         image: {
           url: imageData
         }
@@ -78,13 +79,19 @@ async function sendToDiscord(message, imageData) {
   };
 
   try {
-    await fetch(webhookUrl, {
+    // Send the POST request to the webhook
+    const response = await fetch(webhookUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(data),
     });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
     alert('Your drawing has been submitted!');
     messageInput.value = ''; // Clear the message input
     ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the canvas
