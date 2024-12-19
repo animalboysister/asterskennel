@@ -1,99 +1,73 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>aster's kennel!</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon"><!-- The style.css file allows you to change the look of your web pages.
-         If you include the next line in all your web pages, they will all share the same look.
-         This makes it easier to make new pages for your site. -->
-    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
-  </head>
-  
-  <body>
-      
-    <div class="navbar" style="display: flex; justify-content: space-between; align-items: center;">
-      <a href="/" style="font-family: 'sitelen seli kiwen asuki'; font-weight: bold; font-size: 32px">tomo soweli</a>
-        
-    </script>
-    
-      <div class="dropdown">
-        <button class="dropbtn" onclick="myFunction()" style="font-weight:bold">≡
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content" id="myDropdown">
-          <a href="/about">
-            <span style="font-family: 'sitelen seli kiwen asuki'; font-weight:bold">mi</span>
-            <span style="font-family: 'Trebuchet MS'; font-size: 20px">about me</span>
-          </a>
-          <a href="/art">
-            <span style="font-family: 'sitelen seli kiwen asuki'; font-weight:bold">sitelen</span>
-            <span style="font-family: 'Trebuchet MS'; font-size: 20px">artwork</span>
-          </a>
-          <a href="/articles">
-            <span style="font-family: 'sitelen seli kiwen asuki'; font-weight:bold">pali</span>
-            <span style="font-family: 'Trebuchet MS'; font-size: 20px">articles</span>
-          </a>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aster's kennel!</title>
+  <link rel="icon" href="favicon.ico">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="title">
+      <a href="/"><h1>aster's kennel!</h1></a>
+      <img src="images/gsd.gif" height="32px">
+      <ul class="navigation">
+        <li><a class="active" href="/">home</a></li>
+        <li><a href="/about">about</a></li>
+        <li><a href="/art">art</a></li>
+        <li><a href="/articles">articles</a></li>
+      </ul>
+    </div>
+    <div class="windowbuttons">
+      <span class="windowbutton">_</span>
+      <span class="windowbutton">✦</span>
+      <span class="windowbutton">🞩</span>
+    </div>
+  </header>
+  <div class="content">
+    <div class="textbox">
+      <div class="profile">
+        <div class="profilepic">
+          <img src="images/profilepic.png" width="100%" style="vertical-align: bottom">
+          <p style="text-align: center">art by <a href="https://x.com/aGentlezoo">savvy</a></p>
+        </div>
+        <div>
+          <div class="box" style="border-bottom: 2px solid #909090;">
+            <img src="images/zootherian.png" height="100%">
+            <div class="centered">
+              <p>19 ✦ they/them</p>
+              <p>a demibiromantic non-binary agenderfluid non-practising non-exclusive ethical zoosexual furry and therian!</p>
+            </div>
+          </div>
+          <div class="box">
+            <img src="images/dogsarehot.gif">
+          </div>
         </div>
       </div>
-    </div>
-
-    <script>
-    /* When the user clicks on the button, 
-    toggle between hiding and showing the dropdown content */
-    function myFunction() {
-      document.getElementById("myDropdown").classList.toggle("show");
-    }
-    
-    // Close the dropdown if the user clicks outside of it
-    window.onclick = function(e) {
-      if (!e.target.matches('.dropbtn')) {
-      var myDropdown = document.getElementById("myDropdown");
-        if (myDropdown.classList.contains('show')) {
-          myDropdown.classList.remove('show');
-        }
-      }
-    }
-    </script>
-    
-    <div class="content">
-      <div class="rounded-box">
-        <h1 style="font-family: 'sitelen seli kiwen juniko'">aster's kennel!</h1>
-        <div class="columns">
-          <div class="image-section">
-            <img src="images/profilepic.png" height="100%" width="100%" style="max-width: 120px" alt="aster!">
-            <p class="description" style="font-size: 14px; text-align: center;">art by <a href="https://x.com/aGentlezoo" style="color: #331c0c; font-weight: bold; text-decoration: none">savvy!</a></p>          
-          </div>
-          <p class="text">hi, im <b>aster</b> (they/them)! I'm a border collie furry and therian as well as a biromantic nonbinary non-practising non-exclusive <b>zoosexual</b>. if you're here I assume you already know what that means but if not, <b>zoosexuality</b> or <b>zoophilia</b> is the sexual or romantic attraction to animals.</p>
+      <h1 style="margin-top:20px">anonymous drawbox!</h1>
+      <div class="drawbox">
+        <div class="controls">
+          <input type="range" id="brushSize" min="1" max="50" value="5">
+          <input type="color" id="brushColor" value="#000000">
+          <button id="undoDrawing">Undo</button>
         </div>
-        <p style="margin-top: 0px">that might sound pretty strange at first — like, real animals? and the answer is yeah! especially other dogs or larger animals. I've never been in a non-human relationship but I think that animals are our equals in every way and are deserving of the same love, respect, and autonomony as humans.</p>
-        <p>feel free to explore my kennel by using the menu in the top right. I hope to see you around!</p>
-        <section class="social-links">
-          <p>follow me on:</p>
-          <div class="social-buttons">
-            <a href="https://twitter.com/animalboysister" target="_blank" class="social-button">
-              <img src="images/x.svg" height=20px>
-            </a>
-            <a href="https://bsky.app/profile/animalboysister.bsky.social" target="_blank" class="social-button">
-              <img src="images/bsky.svg" height=20px>
-            </a>
-            <a href="discord"  target="_blank" class="social-button">
-              <img src="images/discord.svg" height=20px>
-            </a>
-          </div>
-        </section>
+        <canvas id="drawingCanvas" height="400" width="600"></canvas>
+        <div class="submit">
+          <textarea id="message" placeholder="Write a message..."></textarea>
+          <button id="submitDrawing">Submit</button>
+        </div>
       </div>
+      <script src="drawbox.js"></script>
     </div>
-    
-    <footer class="footer">
-      <p style="font-family: 'Trebuchet MS'">this website is part of the <a href="https://lavender.chrysocyon.xyz/webring.html" style="color: #eeeeee; font-weight: bold; text-decoration: none">animalia webring</a></p>
-      <div class="footer-buttons">
-        <button class="footer-button"><a href="https://lavender.chrysocyon.xyz/webring.html?prev=aster" style="color: #331c0c; font-weight: bold; text-decoration: none">← back</a></button>
-        <button class="footer-button"><a href="https://lavender.chrysocyon.xyz/webring.html?random=aster" style="color: #331c0c; font-weight: bold; text-decoration: none">random</a></button>
-        <button class="footer-button"><a href="https://lavender.chrysocyon.xyz/webring.html?next=aster" style="color: #331c0c; font-weight: bold; text-decoration: none">next →</a></button>
-      </div>
-    </footer>
-      
-  </body>
+  </div>
+  <footer>
+    <p style="padding:0">this website is part of the <a href="https://lavender.chrysocyon.xyz/webring.html" class="footerbutton">animalia webring</a></p>
+    <div class="footerbuttons">
+        <a href="https://lavender.chrysocyon.xyz/webring.html?prev=aster" class="footerbutton">← back</a></button>
+        <a href="https://lavender.chrysocyon.xyz/webring.html?random=aster" class="footerbutton">random</a></button>
+        <a href="https://lavender.chrysocyon.xyz/webring.html?next=aster" class="footerbutton">next →</a></button>
+    </div>
+</footer>
+</body>
 </html>
-
