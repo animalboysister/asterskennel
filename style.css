@@ -45,6 +45,8 @@ a {
   margin: 0;
   color: #331C0C;
   text-decoration: underline;
+  font-size: 1.2rem;
+  padding: 10px 0;
 }
 
 header a {
@@ -119,7 +121,6 @@ footer {
 .columns {
   display: flex;
   align-items: flex-start;
-  border-bottom: 2px solid #909090;
 }
 
 .profilepic {
@@ -138,6 +139,10 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.sociallinks {
+  text-align: center;
 }
 
 .text {
