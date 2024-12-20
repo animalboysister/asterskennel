@@ -84,29 +84,19 @@ async function uploadToImgur(base64Image) {
 }
 
 async function sendToDiscord(message, imageData) {
+  const webhookUrl = 'https://canary.discord.com/api/webhooks/1319231562226602024/RiOrNJwdG2uKpeWWKE3pKFPqDVVkDWA89jOJV9okHEFUBswQig2ZkhZWiziOjzDFPXhU'; // Replace with your Discord webhook URL
+
+  // Convert the base64 data URL to a Blob
+  const blob = await fetch(imageData).then((res) => res.blob());
+  const formData = new FormData();
+  formData.append('file', blob, 'drawing.png'); // Add the image as an attachment
+  formData.append('payload_json', JSON.stringify({ content: message || "Anonymous submission" }));
+
   try {
-    const imageUrl = await uploadToImgur(imageData); // Upload the image to Imgur
-    const webhookUrl = 'https://discord.com/api/webhooks/1319231562226602024/RiOrNJwdG2uKpeWWKE3pKFPqDVVkDWA89jOJV9okHEFUBswQig2ZkhZWiziOjzDFPXhU';
-
-    const data = {
-      content: message || "No message provided",
-      embeds: [
-        {
-          title: "Anonymous Drawing",
-          description: message || "No message provided",
-          image: {
-            url: imageUrl // Use the Imgur URL
-          }
-        }
-      ]
-    };
-
+    // Send the POST request with form data
     const response = await fetch(webhookUrl, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
+      body: formData,
     });
 
     if (!response.ok) {
