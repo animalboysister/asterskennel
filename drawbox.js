@@ -60,43 +60,25 @@ submitButton.addEventListener('click', () => {
   }
 });
 
-async function uploadToImgur(base64Image) {
-  const clientId = 'YOUR_IMGUR_CLIENT_ID'; // Replace with your Imgur client ID
-  const url = 'https://api.imgur.com/3/image';
-
-  const formData = new FormData();
-  formData.append('image', base64Image.split(',')[1]);
-
-  const response = await fetch(url, {
-    method: 'POST',
-    headers: {
-      'Authorization': `Client-ID ${clientId}`
-    },
-    body: formData
-  });
-
-  const data = await response.json();
-  if (data.success) {
-    return data.data.link; // Return the URL of the uploaded image
-  } else {
-    throw new Error('Failed to upload image to Imgur');
-  }
-}
-
 async function sendToDiscord(message, imageData) {
-  const webhookUrl = 'https://canary.discord.com/api/webhooks/1319231562226602024/RiOrNJwdG2uKpeWWKE3pKFPqDVVkDWA89jOJV9okHEFUBswQig2ZkhZWiziOjzDFPXhU'; // Replace with your Discord webhook URL
+  const webhookUrl = 'YOUR_DISCORD_WEBHOOK_URL'; // Replace with your actual Discord webhook URL
 
   // Convert the base64 data URL to a Blob
   const blob = await fetch(imageData).then((res) => res.blob());
+
+  // Create a FormData object for the file and message
   const formData = new FormData();
-  formData.append('file', blob, 'drawing.png'); // Add the image as an attachment
-  formData.append('payload_json', JSON.stringify({ content: message || "Anonymous submission" }));
+  formData.append('file', blob, 'drawing.png'); // Attach the image
+  formData.append(
+    'payload_json',
+    JSON.stringify({ content: message || "Anonymous submission" })
+  );
 
   try {
-    // Send the POST request with form data
+    // Send POST request to Discord
     const response = await fetch(webhookUrl, {
       method: 'POST',
-      body: formData,
+      body: formData, // Use the FormData object
     });
 
     if (!response.ok) {
