@@ -7,7 +7,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: #8fa990 url("images/background.png") repeat;
+  background: #46514a url("images/background.png") repeat;
   background-size: 150px;
   font-family: 'VT323', serif;
 }
@@ -94,7 +94,7 @@ footer {
 }
 
 .windowbuttons {
-  padding: 5px 20px;
+  padding: 0 20px 0 0;
   display: flex;
   gap: 10px;
 }
@@ -147,7 +147,7 @@ footer {
 
 .text {
   text-align: justify;
-  margin: f0px auto;
+  margin: 0px auto;
   max-width: 600px;
 }
 
