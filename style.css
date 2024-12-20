@@ -132,6 +132,14 @@ footer {
   flex-shrink: 0;
 }
 
+.image-section {
+  display: flex;
+  flex-direction: column; /* Stack the image and credit vertically */
+  align-items: center; /* Center-align the image and credit */
+  max-width: 300px; /* Ensure the image section doesn't expand too much */
+  margin-right: 10px; /* Add a little space on the right side */
+}
+
 .box {
   height: 124px;
   display: flex;
@@ -166,7 +174,7 @@ footer {
 #drawingCanvas {
   display: block;
   margin: 0 auto 20px auto;
-  border: 2px solid black;
+  border: 2px solid #909090;
   background: white;
   cursor: crosshair;
 }
@@ -178,10 +186,8 @@ footer {
 }
 
 #message {
-  width: 500px;
-  height: 1rem;
-  margin-bottom: 20px;
-
+  width: 400px;
+  height: 32px;
 }
 
 .footerbutton {

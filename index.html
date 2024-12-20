@@ -35,14 +35,16 @@
         </div>
         <div>
           <div class="box" style="border-bottom: 2px solid #909090; border-left: 2px solid #909090">
-            <img src="images/dogsarehot.gif" height="50%">
-          </div>
-          <div class="box" style="border-left: 2px solid #909090">
             <img src="images/zootherian.png" height="100%">
             <div class="centered">
               <p>19 ✦ they/them</p>
               <p style="padding:0px">a demibiromantic non-binary agenderfluid non-practising non-exclusive ethical zoosexual border collie furry and therian!</p>
             </div>
+          </div>
+          <div class="box" style="border-left: 2px solid #909090">
+                <img src="images/gsd.gif" height="30%" style="transform: scaleX(-1);">
+              <img src="images/dogsarehot.gif" height="50%">
+              <img src="images/gsd.gif" height="30%">
           </div>
         </div>  
       </div>
@@ -65,17 +67,18 @@
           </div>
         </div>
       </div>
-      <h1 style="text-align: center">anonymous drawbox!</h1>
+      <h1 style="text-align: center">anonymous drawbox</h1>
       <canvas id="drawingCanvas" width="500" height="300"></canvas>
       <div class="controls">
-        <label for="brushSize">Brush Size:</label>
         <input type="range" id="brushSize" min="1" max="50" value="5">
-        <label for="brushColor">Brush Color:</label>
         <input type="color" id="brushColor" value="#000000">
         <button id="undoButton">Undo</button>
-        <label for="message">Anonymous Message:</label>
-        <textarea id="message" placeholder="Write a message..."></textarea>
         <button id="submitDrawing">Submit Drawing</button>
+      </div>
+      <h1 style="text-align: center">anonymous asks</h1>
+      <div class="controls">
+        <textarea id="message" placeholder="Write a message..."></textarea>
+        <button id="submitMessage">Submit Message</button>
       </div>
       <script src="drawbox.js"></script>
       <div class="columns" style="border-top: 2px solid #909090">
