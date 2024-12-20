@@ -29,51 +29,58 @@
   <div class="content">
     <div class="textbox">
       <div class="columns">
-        <div class="profilepic" style="height: 250px; border-bottom: 2px solid #909090">
-          <img src="images/profilepic.png" width="100%">
+        <div class="profilepic">
+          <img src="images/profilepic.png" width="100%" style="border-bottom: 2px solid #909090">
           <p style="text-align: center">art by <a href="https://x.com/aGentlezoo">savvy!</a></p>
         </div>
         <div>
           <div class="box" style="border-bottom: 2px solid #909090; border-left: 2px solid #909090">
+            <img src="images/dogsarehot.gif" height="50%">
+          </div>
+          <div class="box" style="border-left: 2px solid #909090">
             <img src="images/zootherian.png" height="100%">
             <div class="centered">
               <p>19 ✦ they/them</p>
-              <p>a demibiromantic non-binary agenderfluid non-practising non-exclusive ethical zoosexual border collie furry and therian!</p>
-            </div>
-          </div>
-          <div class="box" style="border-left: 2px solid #909090; border-bottom: 2px solid #909090">
-            <div>
-              <p>hiya, my name is aster and I'm a dog on the net! I mainly post about being a zoo, follow me here:</p>
-                <div class="sociallinks ">
-                  <a href="https://x.com/animalboysister">twitter</a>
-                  <a href="https://bsky.app/profile/aster.zoolandia.org">bluesky</a>
-                  <a href="https://discord.gg/TUcc6a2wWq">discord</a>
-                </div>
+              <p style="padding:0px">a demibiromantic non-binary agenderfluid non-practising non-exclusive ethical zoosexual border collie furry and therian!</p>
             </div>
           </div>
         </div>  
       </div>
-      <div class="content">
-        <div class="rounded-box">
-          <h1 style="text-align: center">anonymous drawbox!</h1>
-      
-          <canvas id="drawingCanvas" width="500" height="300"></canvas>
-      
-          <div class="controls">
-            <label for="brushSize">Brush Size:</label>
-            <input type="range" id="brushSize" min="1" max="50" value="5">
-            
-            <label for="brushColor">Brush Color:</label>
-            <input type="color" id="brushColor" value="#000000">
-      
-            <label for="message">Anonymous Message:</label>
-            <textarea id="message" placeholder="Write a message..."></textarea>
-      
-            <button id="submitDrawing">Submit Drawing</button>
+      <div class="columns">
+        <div class="box" style="border-right: 2px solid #909090; border-top: 2px solid #909090; width:400px; border-bottom: 2px solid #909090">
+          <div>
+            <h2>socials</h2>
+            <p>hiya, I'm aster and I'm a dog on the net! I mainly post about being a zoo, follow me here:</p>
+              <div class="sociallinks ">
+                <a href="https://x.com/animalboysister">twitter</a>
+                <a href="https://bsky.app/profile/aster.zoolandia.org">bluesky</a>
+                <a href="https://discord.gg/TUcc6a2wWq">discord</a>
+              </div>
+          </div>
+        </div>
+        <div class="box" style="width:400px; border-top: 2px solid #909090; border-bottom: 2px solid #909090">
+          <div>
+            <h2>interests</h2>
+            <p>zoosexuality, animal rights activism, organic chemistry, pharmacology, conlangs, indie folk music, minecraft, pokemon, and more...</p>
           </div>
         </div>
       </div>
+      <h1 style="text-align: center">anonymous drawbox!</h1>
+      <canvas id="drawingCanvas" width="500" height="300"></canvas>
+      <div class="controls">
+        <label for="brushSize">Brush Size:</label>
+        <input type="range" id="brushSize" min="1" max="50" value="5">
+        <label for="brushColor">Brush Color:</label>
+        <input type="color" id="brushColor" value="#000000">
+        <button id="undoButton">Undo</button>
+        <label for="message">Anonymous Message:</label>
+        <textarea id="message" placeholder="Write a message..."></textarea>
+        <button id="submitDrawing">Submit Drawing</button>
+      </div>
       <script src="drawbox.js"></script>
+      <div class="columns" style="border-top: 2px solid #909090">
+        <img src="images/stamps/zooflag.png" height="56px">
+      </div>
     </div>
   </div>
   <footer>

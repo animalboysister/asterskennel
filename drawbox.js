@@ -6,10 +6,31 @@ const brushColorInput = document.getElementById('brushColor');
 const messageInput = document.getElementById('message');
 const submitButton = document.getElementById('submitDrawing');
 
+// Create an undo button in your HTML and reference it
+const undoButton = document.getElementById('undoButton');
+
 // Set initial drawing settings
 let drawing = false;
 let brushSize = brushSizeInput.value;
 let brushColor = brushColorInput.value;
+
+// History of canvas states for undo functionality
+let canvasHistory = [];
+const maxHistory = 10; // Limit the number of states to save memory
+
+// Save the current state of the canvas
+function saveState() {
+  if (canvasHistory.length >= maxHistory) {
+    canvasHistory.shift(); // Remove the oldest state if history exceeds max length
+  }
+  canvasHistory.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
+}
+
+// Undo the last drawing action
+function undo() {
+    const lastState = canvasHistory.pop();
+    ctx.putImageData(lastState, 0, 0);
+}
 
 // Adjust brush size and color dynamically
 brushSizeInput.addEventListener('input', () => {
@@ -22,6 +43,7 @@ brushColorInput.addEventListener('input', () => {
 
 // Start drawing when mouse is pressed
 canvas.addEventListener('mousedown', (e) => {
+  saveState(); // Save the state before starting a new drawing
   drawing = true;
   draw(e);
 });
@@ -41,13 +63,18 @@ canvas.addEventListener('mousemove', (e) => {
 
 // Drawing function
 function draw(e) {
+  const rect = canvas.getBoundingClientRect(); // Get the canvas's position
+  const x = e.clientX - rect.left; // Adjust for canvas position
+  const y = e.clientY - rect.top;  // Adjust for canvas position
+
   ctx.lineWidth = brushSize;
   ctx.lineCap = 'round';
   ctx.strokeStyle = brushColor;
-  ctx.lineTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
+
+  ctx.lineTo(x, y);
   ctx.stroke();
   ctx.beginPath();
-  ctx.moveTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
+  ctx.moveTo(x, y);
 }
 
 // Submit the drawing to Discord Webhook
@@ -60,6 +87,10 @@ submitButton.addEventListener('click', () => {
   }
 });
 
+// Undo button event listener
+undoButton.addEventListener('click', undo);
+
+// Discord Webhook submission function remains unchanged
 async function sendToDiscord(message, imageData) {
   const webhookUrl = 'https://discord.com/api/webhooks/1319231562226602024/RiOrNJwdG2uKpeWWKE3pKFPqDVVkDWA89jOJV9okHEFUBswQig2ZkhZWiziOjzDFPXhU'; // Replace with your actual Discord webhook URL
 
@@ -88,6 +119,7 @@ async function sendToDiscord(message, imageData) {
     alert('Your drawing has been submitted!');
     messageInput.value = ''; // Clear the message input
     ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the canvas
+    canvasHistory = []; // Clear history after submission
   } catch (error) {
     console.error('Error sending data to Discord:', error);
     alert('Something went wrong. Please try again.');

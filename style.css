@@ -30,12 +30,12 @@ header h1 {
 
 h1, h2, h3 {
   margin: 0;
-  padding: 5px;
+  padding: 5px 10px;
 }
 
 p {
+  padding: 5px 10px;
   margin: 0 auto;
-  padding: 5px;
   font-size: 1.2rem;
   text-align: justify;
   line-height: 1.4;
@@ -46,7 +46,7 @@ a {
   color: #331C0C;
   text-decoration: underline;
   font-size: 1.2rem;
-  padding: 10px 0;
+  padding: 0;
 }
 
 header a {
@@ -153,19 +153,7 @@ footer {
   text-align: justify;
   margin: 0px auto;
   max-width: 600px;
-}
-
-.image-section {
-  display: flex;
-  flex-direction: column; /* Stack the image and credit vertically */
-  align-items: center; /* Center-align the image and credit */
-  max-width: 300px; /* Ensure the image section doesn't expand too much */
-  margin-right: 10px; /* Add a little space on the right side */
-}
-
-.image-section img {
-  margin: 0; /* Remove extra margins around the image */
-  padding: 5px; /* Reduce padding above the image */
+  padding: 10px auto;
 }
 
 .controls {
