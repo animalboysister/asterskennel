@@ -25,17 +25,17 @@ header {
 
 header h1 {
   color: white;
+  padding: 0px;
 }
 
-h1 {
+h1, h2, h3 {
   margin: 0;
-  padding-top: 10px;
-  text-align: center;
+  padding: 5px;
 }
 
 p {
   margin: 0 auto;
-  padding: 10px;
+  padding: 5px;
   font-size: 1.2rem;
   text-align: justify;
   line-height: 1.4;
@@ -116,7 +116,7 @@ footer {
   border-right: 2px solid #909090;
 }
 
-.profile {
+.columns {
   display: flex;
   align-items: flex-start;
   border-bottom: 2px solid #909090;
@@ -125,7 +125,6 @@ footer {
 .profilepic {
   width: 200px;
   flex-shrink: 0;
-  border-right: 2px solid #909090;
 }
 
 .box {
@@ -141,6 +140,12 @@ footer {
   justify-content: center;
 }
 
+.text {
+  text-align: justify;
+  margin: f0px auto;
+  max-width: 600px;
+}
+
 .controls {
   display: flex;
   justify-content: center;
@@ -150,7 +155,7 @@ footer {
 
 #drawingCanvas {
   display: block;
-  margin: 20px auto;
+  margin: 0 auto 20px auto;
   border: 2px solid black;
   background: white;
   cursor: crosshair;

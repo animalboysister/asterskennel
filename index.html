@@ -27,38 +27,40 @@
   </header>
   <div class="content">
     <div class="textbox">
-      <div class="profile">
+      <div class="columns">
         <div class="profilepic">
-          <img src="images/profilepic.png" width="100%" style="vertical-align: bottom">
+          <img src="images/profilepic.png" width="100%">
           <p style="text-align: center">art by <a href="https://x.com/aGentlezoo">savvy</a></p>
         </div>
         <div>
-          <div class="box" style="border-bottom: 2px solid #909090;">
+          <div class="box" style="border-bottom: 2px solid #909090; border-left: 2px solid #909090">
             <img src="images/zootherian.png" height="100%">
             <div class="centered">
               <p>19 ✦ they/them</p>
-              <p>a demibiromantic non-binary agenderfluid non-practising non-exclusive ethical zoosexual furry and therian!</p>
+              <p>a demibiromantic non-binary agenderfluid non-practising non-exclusive ethical zoosexual border collie furry and therian!</p>
             </div>
           </div>
-          <div class="box">
-            <img src="images/dogsarehot.gif">
+          <div class="box" style="border-left: 2px solid #909090">
+              <img src="images/gsd.gif" height="30%" style="transform: scaleX(-1);">
+              <img src="images/dogsarehot.gif" height="50%">
+              <img src="images/gsd.gif" height="30%">
+          </div>
+        </div>  
+      </div>
+      <div class="columns">
+        <div class="box" style="border-right: 2px solid #909090; width:400px">
+          <div>
+            <h2>about me</h2>
+            <p>hiya, my name is aster and I'm a dog on the net! I mainly post about being a zoo</p>
+          </div>
+        </div>
+        <div class="box" style="width:400px">
+          <div>
+            <h2>interests</h2>
+            <p>zoosexuality, animal rights activism, organic chemistry, pharmacology, conlangs, indie folk music, minecraft, pokemon</p>
           </div>
         </div>
       </div>
-      <h1 style="margin-top:20px">anonymous drawbox!</h1>
-      <div class="drawbox">
-        <div class="controls">
-          <input type="range" id="brushSize" min="1" max="50" value="5">
-          <input type="color" id="brushColor" value="#000000">
-          <button id="undoDrawing">Undo</button>
-        </div>
-        <canvas id="drawingCanvas" height="400" width="600"></canvas>
-        <div class="submit">
-          <textarea id="message" placeholder="Write a message..."></textarea>
-          <button id="submitDrawing">Submit</button>
-        </div>
-      </div>
-      <script src="drawbox.js"></script>
     </div>
   </div>
   <footer>
