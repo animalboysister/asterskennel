@@ -61,7 +61,7 @@ submitButton.addEventListener('click', () => {
 });
 
 async function sendToDiscord(message, imageData) {
-  const webhookUrl = 'YOUR_DISCORD_WEBHOOK_URL'; // Replace with your actual Discord webhook URL
+  const webhookUrl = 'https://discord.com/api/webhooks/1319231562226602024/RiOrNJwdG2uKpeWWKE3pKFPqDVVkDWA89jOJV9okHEFUBswQig2ZkhZWiziOjzDFPXhU'; // Replace with your actual Discord webhook URL
 
   // Convert the base64 data URL to a Blob
   const blob = await fetch(imageData).then((res) => res.blob());
