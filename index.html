@@ -29,7 +29,7 @@
   <div class="content">
     <div class="textbox">
       <div class="columns">
-        <div class="profilepic">
+        <div class="profilepic" style="height: 250px; border-bottom: 2px solid #909090">
           <img src="images/profilepic.png" width="100%">
           <p style="text-align: center">art by <a href="https://x.com/aGentlezoo">savvy!</a></p>
         </div>
@@ -41,35 +41,39 @@
               <p>a demibiromantic non-binary agenderfluid non-practising non-exclusive ethical zoosexual border collie furry and therian!</p>
             </div>
           </div>
-          <div class="box" style="border-left: 2px solid #909090">
-              <img src="images/gsd.gif" height="30%" style="transform: scaleX(-1);">
-              <img src="images/dogsarehot.gif" height="50%">
-              <img src="images/gsd.gif" height="30%">
+          <div class="box" style="border-left: 2px solid #909090; border-bottom: 2px solid #909090">
+            <div>
+              <p>hiya, my name is aster and I'm a dog on the net! I mainly post about being a zoo, follow me here:</p>
+                <div class="sociallinks ">
+                  <a href="https://x.com/animalboysister">twitter</a>
+                  <a href="https://bsky.app/profile/aster.zoolandia.org">bluesky</a>
+                  <a href="https://discord.gg/TUcc6a2wWq">discord</a>
+                </div>
+            </div>
           </div>
         </div>  
       </div>
-      <div class="columns">
-        <div class="box" style="border-right: 2px solid #909090; border-top: 2px solid #909090; width:400px; border-bottom: 2px solid #909090">
-          <div>
-            <h2>socials</h2>
-            <p>hiya, I'm aster and I'm a dog on the net! I mainly post about being a zoo, follow me here:</p>
-              <div class="sociallinks ">
-                <a href="https://x.com/animalboysister">twitter</a>
-                <a href="https://bsky.app/profile/aster.zoolandia.org">bluesky</a>
-                <a href="https://discord.gg/TUcc6a2wWq">discord</a>
-              </div>
-          </div>
-        </div>
-        <div class="box" style="width:400px; border-top: 2px solid #909090; border-bottom: 2px solid #909090">
-          <div>
-            <h2>interests</h2>
-            <p>zoosexuality, animal rights activism, organic chemistry, pharmacology, conlangs, indie folk music, minecraft, pokemon, and more...</p>
+      <div class="content">
+        <div class="rounded-box">
+          <h1 style="font-family: 'sitelen seli kiwen juniko'">anonymous drawbox!</h1>
+      
+          <canvas id="drawingCanvas" width="600" height="400"></canvas>
+      
+          <div class="controls">
+            <label for="brushSize">Brush Size:</label>
+            <input type="range" id="brushSize" min="1" max="50" value="5">
+            
+            <label for="brushColor">Brush Color:</label>
+            <input type="color" id="brushColor" value="#000000">
+      
+            <label for="message">Anonymous Message:</label>
+            <textarea id="message" placeholder="Write a message..."></textarea>
+      
+            <button id="submitDrawing">Submit Drawing</button>
           </div>
         </div>
       </div>
-      <div class="columns">
-        <img src="images/stamps/zooflag.png" height="55px">
-      </div>
+      <script src="drawbox.js"></script>
     </div>
   </div>
   <footer>
