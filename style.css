@@ -29,6 +29,7 @@ header h1 {
 
 h1 {
   margin: 0;
+  padding-top: 10px;
   text-align: center;
 }
 
@@ -144,7 +145,7 @@ footer {
   display: flex;
   justify-content: center;
   gap: 20px;
-  padding-top: 20px;
+  margin: 20px 50px;
 }
 
 #drawingCanvas {
