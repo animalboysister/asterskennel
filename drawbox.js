@@ -60,6 +60,28 @@ canvas.addEventListener('mousemove', (e) => {
   }
 });
 
+// Start drawing when touch starts
+canvas.addEventListener('touchstart', (e) => {
+  e.preventDefault();
+  saveState(); // Save the state before starting a new drawing
+  drawing = true;
+  draw(e.touches[0]);
+});
+
+// Stop drawing when touch ends
+canvas.addEventListener('touchend', () => {
+  drawing = false;
+  ctx.beginPath();
+});
+
+// Draw on the canvas when touch moves
+canvas.addEventListener('touchmove', (e) => {
+  e.preventDefault();
+  if (drawing) {
+    draw(e.touches[0]);
+  }
+});
+
 // Drawing function
 function draw(e) {
   const rect = canvas.getBoundingClientRect(); // Get the canvas's position
