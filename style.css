@@ -21,13 +21,13 @@ a {
 }
 
 h1, h2, h3 {
-    margin: 0;
+    margin: 5px 0;
 }
 
 p {
     font-size: 18px;
     line-height: 1.4;
-    margin: 0
+    margin: 5px 0;
 }
 
 .content {
@@ -236,7 +236,7 @@ p {
     display: block;
     margin: 0 auto 20px auto;
     border: 2px solid #909090;
-    background: #FFFFFF;
+    background: url(images/canvas.png);
     cursor: crosshair;
 }
 
