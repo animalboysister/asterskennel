@@ -35,6 +35,12 @@ p {
     margin-top: 50px;
 }
 
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .left-window {
     background-color: #b99885;
     border: 2px solid #331C0C;
