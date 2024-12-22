@@ -47,18 +47,29 @@ input {
     align-items: center;
 }
 
-.left-window {
-    background-color: #b99885;
-    border: 2px solid #331C0C;
+.left-column {
     width: 250px;
     margin-left: auto;
+}
+
+.middle-column {
+    width: 600px;
+}
+
+.right-column {
+    width: 250px;
+    margin-right: auto;
+}
+
+.small-window {
+    background-color: #b99885;
+    border: 2px solid #331C0C;
     margin-bottom: 50px;
 }
 
 .window { 
     background-color: #b99885;
     border: 2px solid #331C0C;
-    width: 600px;
     margin-bottom: 50px;
 }
 
@@ -162,7 +173,7 @@ input {
     padding: 20px;
 }
 
-.columns {
+.horizontal {
 	display: flex;
 	align-items: flex-start;
     gap: 20px;
@@ -211,16 +222,40 @@ input {
     gap: 10px;
 }
 
-.right-window {
-    background-color: #b99885;
-    border: 2px solid #331C0C;
-    width: 250px;
-    margin-right: auto;
-    margin-bottom: 50px;
-}
-
 .footer-buttons {
     display: flex;
     justify-content: center;
     gap: 20px;
+}
+
+@media (max-width: 1215px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+  }
+
+    .left-column, .right-column, .middle-column {
+        width: 90%;
+        margin: 10px 0;
+  }
+
+    .columns {
+        flex-direction: column;
+        align-items: center;
+  }
+
+    .text {
+        text-align: center;
+  }
+
+    #message {
+        width: 90%;
+  }
+
+    #drawingCanvas {
+        width: 90%;
+        height: auto;
+  }
 }

