@@ -150,7 +150,7 @@ async function sendMessageToDiscord(message) {
     messageInput.value = ''; // Clear the message input
   } catch (error) {
     console.error('Error sending message to Discord:', error);
-    alert('Something went wrong. Please try again.');
+    alert(Error);
   }
 }
 
