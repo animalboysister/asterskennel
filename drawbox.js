@@ -140,7 +140,9 @@ async function sendMessageToDiscord(message) {
       body: formData,
     });
 
-    if (!response.ok) {
+    if (response.status === 429) {
+      throw new Error(`Too many requests! please wait before submitting your next message`) 
+    } else if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
@@ -169,7 +171,9 @@ async function sendDrawingToDiscord(imageData) {
       body: formData,
     });
 
-    if (!response.ok) {
+    if (response.status === 429) {
+      throw new Error(`Too many requests! please wait before submitting your next message`) 
+    } else if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
