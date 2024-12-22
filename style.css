@@ -256,6 +256,7 @@ p {
 .image-section {
     max-width: 250px;
     text-align: center;
+    margin: 10px;
   }
 
 @media (max-width: 1215px) {
