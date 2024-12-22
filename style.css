@@ -184,6 +184,12 @@ p {
     text-align: justify;
 }
 
+.square {
+    shape-outside: square;
+    float: right;
+    margin-left: 10px;
+}
+
 .buttons {
     width: 100%;
     display: flex;
@@ -237,7 +243,7 @@ p {
     display: block;
     margin: 0 auto 20px auto;
     border: 2px solid #909090;
-    background: url(images/canvas.png);
+    background-color: #ffffff;
     cursor: crosshair;
 }
 
