@@ -8,7 +8,7 @@ body {
 	margin: 0;
 	padding: 0;
     cursor: url("images/cursor.png"), auto;
-    font-family: 'VT323', monospace;
+    font-family: 'VT323', serif;
     background: #46514a url("images/background.png") repeat;
 	background-size: 150px;
 }
@@ -17,7 +17,7 @@ a {
     text-decoration: underline;
     color: #000000;
     font-size: 18px;
-    cursor: url("images/cursor.png"), auto;
+    cursor: url("images/cursorhover.png"), auto;
 }
 
 h1, h2, h3 {
@@ -28,10 +28,6 @@ p {
     font-size: 18px;
     line-height: 1.4;
     margin: 0
-}
-
-input {
-    cursor: url("images/cursor.png"), auto;
 }
 
 .content {
@@ -130,6 +126,10 @@ input {
     display: flex;
 }
 
+.stamp {
+    height: 56px;
+}
+
 .menu-bar {
     background-color: #b99885;
     margin: 2px;
@@ -183,6 +183,28 @@ input {
     text-align: justify;
 }
 
+.buttons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: 1px solid #331C0C;
+}
+
+.button {
+    background-color: #b99885;
+    border-top: 2px solid #ffe5e0;
+    border-right: 2px solid #331C0C;
+    border-left: 2px solid #ffe5e0;
+    border-bottom: 2px solid #331C0C;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-family: 'VT323';
+    font-size: 18px;
+    cursor: url("images/cursorhover.png"), auto;
+}
+
 .controls {
     display: flex;
     justify-content: center;
@@ -193,11 +215,13 @@ input {
 #brushSize {
     height: 24px;
     width: 100px;
+    cursor: url("images/cursorhover.png"), auto;
 }
 
 #brushColor {
     height: 24px;
     width: 24px;
+    cursor: url("images/cursorhover.png"), auto;
 }
 
 #message {
@@ -216,16 +240,10 @@ input {
     cursor: crosshair;
 }
 
-  .submit {
+.submit {
     display: flex;
     justify-content: center;
     gap: 10px;
-}
-
-.footer-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
 }
 
 @media (max-width: 1215px) {
