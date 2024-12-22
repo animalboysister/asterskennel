@@ -247,6 +247,11 @@ p {
     gap: 10px;
 }
 
+.image-section {
+    max-width: 250px;
+    text-align: center;
+  }
+
 @media (max-width: 1215px) {
     .content {
         display: flex;
