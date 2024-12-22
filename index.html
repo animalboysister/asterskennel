@@ -26,7 +26,7 @@
                         <span class="title-bar-button">🞩</span>
                     </div>
                 </div>
-                <span class="menu-bar">art by <a href="https://x.com/aGentlezoo">savvy!</a></span>
+                <span class="menu-bar">art by <a class="menu-bar-item" href="https://x.com/aGentlezoo">savvy!</a></span>
                 <div class="image-workspace">
                     <img src="images/profilepic.png" class="image">
                 </div>
@@ -89,18 +89,15 @@
                         <span class="title-bar-button">🞩</span>
                     </div>
                 </div>
+                <div class="menu-bar">
+                    <input type="range" id="brushSize" min="1" max="51" value="6" step="5">
+                    <input type="color" id="brushColor" value="#000000">
+                    <a class="menu-bar-item" id="undoButton"><u>u</u>ndo</a>
+                    <a class="menu-bar-item" id="submit"><u>s</u>ubmit</a>
+                </div>
                 <div class="workspace">
-                    <canvas id="drawingCanvas" width="500" height="300"></canvas>
-                    <div class="controls">
-                        <input type="range" id="brushSize" min="1" max="50" value="5">
-                        <input type="color" id="brushColor" value="#000000">
-                        <button id="undoButton">Undo</button>
-                        <button id="submitDrawing">Submit Drawing</button>
-                    </div>
-                    <div class="controls">
-                        <textarea id="message" placeholder="Write a message..."></textarea>
-                        <button id="submitMessage">Submit Message</button>
-                    </div>
+                    <textarea id="message" placeholder="Write a message..."></textarea>
+                    <canvas id="drawingCanvas" width="500px" height="300px"></canvas>
                     <script src="drawbox.js"></script>
                 </div>
             </div>

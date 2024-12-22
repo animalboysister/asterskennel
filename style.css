@@ -17,6 +17,7 @@ a {
     text-decoration: underline;
     color: #000000;
     font-size: 18px;
+    cursor: url("images/cursor.png"), auto;
 }
 
 h1, h2, h3 {
@@ -27,6 +28,10 @@ p {
     font-size: 18px;
     line-height: 1.4;
     margin: 0
+}
+
+input {
+    cursor: url("images/cursor.png"), auto;
 }
 
 .content {
@@ -124,11 +129,13 @@ p {
     border-bottom: 1px solid #000000;
     list-style-type: none;
     display: flex;
+    align-items: center;
     font-size: 18px;
     gap: 10px;
 }
 
 .menu-bar-item {
+    background-color: #b99885;
     color: #000000;
     text-decoration: none;
     border: 1px solid transparent;
@@ -172,9 +179,27 @@ p {
     margin: 20px 50px;
 }
 
-  #drawingCanvas {
+#brushSize {
+    height: 24px;
+    width: 100px;
+}
+
+#brushColor {
+    height: 24px;
+    width: 24px;
+}
+
+#message {
     display: block;
     margin: 0 auto 20px auto;
+    resize: none;
+    width: 500px;
+    border: 2px solid #909090;
+}
+
+#drawingCanvas {
+    display: block;
+    margin: 0 auto auto;
     border: 2px solid #909090;
     background: #FFFFFF;
     cursor: crosshair;
@@ -184,11 +209,6 @@ p {
     display: flex;
     justify-content: center;
     gap: 10px;
-}
-
-  #message {
-    width: 400px;
-    height: 32px;
 }
 
 .right-window {

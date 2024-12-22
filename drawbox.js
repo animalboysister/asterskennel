@@ -4,8 +4,7 @@ const ctx = canvas.getContext('2d');
 const brushSizeInput = document.getElementById('brushSize');
 const brushColorInput = document.getElementById('brushColor');
 const messageInput = document.getElementById('message');
-const submitDrawingButton = document.getElementById('submitDrawing');
-const submitMessageButton = document.getElementById('submitMessage');
+const submitButton = document.getElementById('submit');
 const undoButton = document.getElementById('undoButton');
 
 // Set initial drawing settings
@@ -98,27 +97,60 @@ function draw(e) {
   ctx.moveTo(x, y);
 }
 
-// Submit the drawing to Discord Webhook
-submitDrawingButton.addEventListener('click', async () => {
+// Check if the canvas is empty
+function isCanvasDrawn() {
+  const empty = document.createElement('canvas');
+  empty.width = canvas.width;
+  empty.height = canvas.height;
+  return canvas.toDataURL() !== empty.toDataURL();
+}
+
+// Submit the drawing and message to Discord Webhook
+submitButton.addEventListener('click', async () => {
   const imageData = canvas.toDataURL(); // Get canvas data as base64 image
-
-  if (imageData) {
-    await sendDrawingToDiscord(imageData);
-  } else {
-    alert('Nothing to submit!');
-  }
-});
-
-// Submit the message to Discord Webhook
-submitMessageButton.addEventListener('click', async () => {
   const message = messageInput.value.trim();
+
+  if (!isCanvasDrawn() && !message) {
+    alert('You must draw something or enter a message before submitting!');
+    return;
+  }
 
   if (message) {
     await sendMessageToDiscord(message);
-  } else {
-    alert('Message cannot be empty!');
+    return;
+  }
+
+  if (isCanvasDrawn()) {
+    await sendDrawingToDiscord(imageData)
+    return;
   }
 });
+
+// Function to send message to Discord
+async function sendMessageToDiscord(message) {
+  const webhookUrl = 'https://discord.com/api/webhooks/1319231562226602024/RiOrNJwdG2uKpeWWKE3pKFPqDVVkDWA89jOJV9okHEFUBswQig2ZkhZWiziOjzDFPXhU'; // Replace with your actual Discord webhook URL
+
+  // Create a FormData object for the file and message
+  const formData = new FormData();
+  formData.append('payload_json', JSON.stringify({ content: message })); // Attach the message
+
+  try {
+    const response = await fetch(webhookUrl, {
+      method: 'POST',
+      body: formData,
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    alert('Your message has been submitted!');
+    messageInput.value = ''; // Clear the message input
+  } catch (error) {
+    console.error('Error sending message to Discord:', error);
+    alert('Something went wrong. Please try again.');
+  }
+}
 
 // Function to send drawing to Discord
 async function sendDrawingToDiscord(imageData) {
@@ -127,7 +159,7 @@ async function sendDrawingToDiscord(imageData) {
   // Convert the base64 data URL to a Blob
   const blob = await fetch(imageData).then((res) => res.blob());
 
-  // Create a FormData object for the file
+  // Create a FormData object for the file and message
   const formData = new FormData();
   formData.append('file', blob, 'drawing.png'); // Attach the image
 
@@ -145,36 +177,7 @@ async function sendDrawingToDiscord(imageData) {
     ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the canvas
     canvasHistory = []; // Clear history after submission
   } catch (error) {
-    console.error('Error sending drawing to Discord:', error);
-    alert('Something went wrong. Please try again.');
-  }
-}
-
-// Function to send message to Discord
-async function sendMessageToDiscord(message) {
-  const webhookUrl = 'https://discord.com/api/webhooks/1319231562226602024/RiOrNJwdG2uKpeWWKE3pKFPqDVVkDWA89jOJV9okHEFUBswQig2ZkhZWiziOjzDFPXhU'; // Replace with your actual Discord webhook URL
-
-  const payload = {
-    content: message,
-  };
-
-  try {
-    const response = await fetch(webhookUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(payload),
-    });
-
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-
-    alert('Your message has been submitted!');
-    messageInput.value = ''; // Clear the message input
-  } catch (error) {
-    console.error('Error sending message to Discord:', error);
+    console.error('Error sending drawing and message to Discord:', error);
     alert('Something went wrong. Please try again.');
   }
 }
