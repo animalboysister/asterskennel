@@ -150,7 +150,7 @@ async function sendMessageToDiscord(message) {
     messageInput.value = ''; // Clear the message input
   } catch (error) {
     console.error('Error sending message to Discord:', error);
-    alert(Error);
+    alert(error);
   }
 }
 
@@ -182,7 +182,7 @@ async function sendDrawingToDiscord(imageData) {
     canvasHistory = []; // Clear history after submission
   } catch (error) {
     console.error('Error sending drawing and message to Discord:', error);
-    alert(Error);
+    alert(error);
   }
 }
 
