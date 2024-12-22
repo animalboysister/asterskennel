@@ -128,7 +128,7 @@ p {
 
 .stamp {
     height: 56px;
-    margin: 5px 0;
+    margin: 5px;
 }
 
 .menu-bar {
@@ -177,7 +177,7 @@ p {
 .horizontal {
 	display: flex;
 	align-items: flex-start;
-    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .text {
