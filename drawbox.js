@@ -182,7 +182,7 @@ async function sendDrawingToDiscord(imageData) {
     canvasHistory = []; // Clear history after submission
   } catch (error) {
     console.error('Error sending drawing and message to Discord:', error);
-    alert('Something went wrong. Please try again.');
+    alert(Error);
   }
 }
 
