@@ -192,13 +192,6 @@ p {
     margin-bottom: 50px;
 }
 
-.stat-counter {
-    border: 2px solid #331C0C;
-    padding: 5px;
-    display: flex;
-    justify-content: center;
-}
-
 .footer-buttons {
     display: flex;
     justify-content: center;
