@@ -173,14 +173,10 @@ submitButton.addEventListener('click', async () => {
   if (isCanvasDrawn() && message) {
     await sendMessageAndDrawingToDiscord(message, imageData);
     return;
-  }
-
-  if (message) {
-    await sendMessageToDiscord(message);
-  }
-
-  if (isCanvasDrawn()) {
-    await sendDrawingToDiscord(imageData)
+  } else if (message) {
+      await sendMessageToDiscord(message);
+  } else if (isCanvasDrawn()) {
+      await sendDrawingToDiscord(imageData);
   }
   return;
 });
