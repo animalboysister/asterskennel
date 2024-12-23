@@ -24,14 +24,20 @@ h1, h2, h3 {
 	margin: 10px 0;
 }
 
-p, b, i {
+p {
 	font-size: 18px;
 	line-height: 1.4;
 	margin: 10px 0;
 }
 
+b, i {
+	font-size: 18px;
+	line-height: 1.4;
+	margin: 0;
+}
+
 ul, ol {
-	margin: 0 10px;
+	margin: 0;
 }
 
 .content {
@@ -210,6 +216,7 @@ ul, ol {
 	padding: 10px;
 	display: flex;
 	justify-content: center;
+	height: 100%;
 	width: 100%;
 	font-family: 'VT323';
 	font-size: 18px;
