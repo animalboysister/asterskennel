@@ -7,92 +7,96 @@
 body {
 	margin: 0;
 	padding: 0;
-    cursor: url("images/cursor.png"), auto;
-    font-family: 'VT323', serif;
-    background: #46514a url("images/background.png") repeat;
+	cursor: url("images/cursor.png"), auto;
+	font-family: 'VT323', serif;
+	background: #46514a url("images/background.png") repeat;
 	background-size: 150px;
 }
 
 a {
-    text-decoration: underline;
-    color: #000000;
-    font-size: 18px;
-    cursor: url("images/cursorhover.png"), auto;
+	text-decoration: underline;
+	color: #000000;
+	font-size: 18px;
+	cursor: url("images/cursorhover.png"), auto;
 }
 
 h1, h2, h3 {
-    margin: 10px 0;
+	margin: 10px 0;
 }
 
-p {
-    font-size: 18px;
-    line-height: 1.4;
-    margin: 10px 0;
+p, b, i {
+	font-size: 18px;
+	line-height: 1.4;
+	margin: 10px 0;
+}
+
+ul, ol {
+	margin: 0 10px;
 }
 
 .content {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap:50px;
-    margin-top: 50px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap:50px;
+	margin-top: 50px;
 }
 
 .centered {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .left-column {
-    width: 250px;
-    margin-left: auto;
+	width: 250px;
+	margin-left: auto;
 }
 
 .middle-column {
-    width: 600px;
+	width: 600px;
 }
 
 .right-column {
-    width: 250px;
-    margin-right: auto;
+	width: 250px;
+	margin-right: auto;
 }
 
 .small-window {
-    background-color: #b99885;
-    border: 2px solid #331C0C;
-    margin-bottom: 50px;
+	background-color: #b99885;
+	border: 2px solid #331C0C;
+	margin-bottom: 50px;
 }
 
 .window { 
-    background-color: #b99885;
-    border: 2px solid #331C0C;
-    margin-bottom: 50px;
+	background-color: #b99885;
+	border: 2px solid #331C0C;
+	margin-bottom: 50px;
 }
 
 .title-bar {
-    background-color: #331C0C;
-    margin: 2px;
-    padding: 5px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+	background-color: #331C0C;
+	margin: 2px;
+	padding: 5px 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .title-bar-left-aligned {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
 }
 
 .title-bar-icon {
-    height: 20px;
-    width: 20px;
+	height: 20px;
+	width: 20px;
 }
 
 .title-bar-title {
-    font-weight: bold;
-    color: #ffe5e0;
-    font-size: 20px;
+	font-weight: bold;
+	color: #ffe5e0;
+	font-size: 20px;
 }
 
 .title-bar-buttons {
@@ -101,183 +105,183 @@ p {
 }
 
 .title-bar-button{
-    width: 20px;
-    height: 20px;
-    background-color: #b99885;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-top: 1px solid #ffe5e0;
-    border-right: 1px solid #331C0C;
-    border-left: 1px solid #ffe5e0;
-    border-bottom: 1px solid #331C0C;
-    font-size: 20px;
+	width: 20px;
+	height: 20px;
+	background-color: #b99885;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-top: 1px solid #ffe5e0;
+	border-right: 1px solid #331C0C;
+	border-left: 1px solid #ffe5e0;
+	border-bottom: 1px solid #331C0C;
+	font-size: 20px;
 
 }
 
 .image-workspace {
-        background-color: #ffe5e0;
-        border: 2px solid #331C0C;
-        margin: 5px;
+		background-color: #ffe5e0;
+		border: 2px solid #331C0C;
+		margin: 5px;
 }
 
 .image {
-    width: 100%;
-    display: flex;
+	width: 100%;
+	display: flex;
 }
 
 .stamp {
-    height: 56px;
-    margin: 5px;
+	height: 56px;
+	margin: 5px;
 }
 
 .menu-bar {
-    background-color: #b99885;
-    margin: 2px;
-    padding: 5px 10px;
-    border-top: 1px solid #ffe5e0;
-    border-right: 1px solid #000000;
-    border-left: 1px solid #ffe5e0;
-    border-bottom: 1px solid #000000;
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    font-size: 18px;
-    gap: 10px;
+	background-color: #b99885;
+	margin: 2px;
+	padding: 5px 10px;
+	border-top: 1px solid #ffe5e0;
+	border-right: 1px solid #000000;
+	border-left: 1px solid #ffe5e0;
+	border-bottom: 1px solid #000000;
+	list-style-type: none;
+	display: flex;
+	align-items: center;
+	font-size: 18px;
+	gap: 10px;
 }
 
 .menu-bar-item {
-    background-color: #b99885;
-    color: #000000;
-    text-decoration: none;
-    border: 1px solid transparent;
+	background-color: #b99885;
+	color: #000000;
+	text-decoration: none;
+	border: 1px solid transparent;
 }
 
 .menu-bar-item.active {
-    border-top: 1px solid #ffe5e0;
-    border-right: 1px solid #331C0C;
-    border-left: 1px solid #ffe5e0;
-    border-bottom: 1px solid #331C0C;
+	border-top: 1px solid #ffe5e0;
+	border-right: 1px solid #331C0C;
+	border-left: 1px solid #ffe5e0;
+	border-bottom: 1px solid #331C0C;
 }
 
 .menu-bar-item:hover {
-    border-top: 1px solid #ffe5e0;
-    border-right: 1px solid #331C0C;
-    border-left: 1px solid #ffe5e0;
-    border-bottom: 1px solid #331C0C;
+	border-top: 1px solid #ffe5e0;
+	border-right: 1px solid #331C0C;
+	border-left: 1px solid #ffe5e0;
+	border-bottom: 1px solid #331C0C;
 }
 
 .workspace {
-    background-color: #ffe5e0;
-    border: 2px solid #331C0C;
-    margin: 5px;
-    padding: 20px;
+	background-color: #ffe5e0;
+	border: 2px solid #331C0C;
+	margin: 5px;
+	padding: 20px;
 }
 
 .horizontal {
 	display: flex;
 	align-items: flex-start;
-    flex-wrap: wrap;
+	flex-wrap: wrap;
 }
 
 .text {
-    text-align: justify;
+	text-align: justify;
 }
 
 .square {
-    shape-outside: square;
-    float: right;
-    margin-left: 10px;
+	shape-outside: square;
+	float: right;
+	margin-left: 10px;
 }
 
 .buttons {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    border: 1px solid #331C0C;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	border: 1px solid #331C0C;
 }
 
 .button {
-    background-color: #b99885;
-    border-top: 2px solid #ffe5e0;
-    border-right: 2px solid #331C0C;
-    border-left: 2px solid #ffe5e0;
-    border-bottom: 2px solid #331C0C;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    font-family: 'VT323';
-    font-size: 18px;
-    cursor: url("images/cursorhover.png"), auto;
+	background-color: #b99885;
+	border-top: 2px solid #ffe5e0;
+	border-right: 2px solid #331C0C;
+	border-left: 2px solid #ffe5e0;
+	border-bottom: 2px solid #331C0C;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	font-family: 'VT323';
+	font-size: 18px;
+	cursor: url("images/cursorhover.png"), auto;
 }
 
 .controls {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 20px 50px;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	margin: 20px 50px;
 }
 
 #brushSize {
-    height: 24px;
-    width: 100px;
-    cursor: url("images/cursorhover.png"), auto;
+	height: 24px;
+	width: 100px;
+	cursor: url("images/cursorhover.png"), auto;
 }
 
 #brushColor {
-    height: 24px;
-    width: 24px;
-    cursor: url("images/cursorhover.png"), auto;
+	height: 24px;
+	width: 24px;
+	cursor: url("images/cursorhover.png"), auto;
 }
 
 #message {
-    display: block;
-    margin: 0 auto;
-    resize: none;
-    width: 500px;
-    border: 2px solid #909090;
+	display: block;
+	margin: 0 auto;
+	resize: none;
+	width: 500px;
+	border: 2px solid #909090;
 }
 
 #drawingCanvas {
-    display: block;
-    margin: 0 auto 20px auto;
-    border: 2px solid #909090;
-    background-color: #ffffff;
-    cursor: crosshair;
+	display: block;
+	margin: 0 auto 20px auto;
+	border: 2px solid #909090;
+	background-color: #ffffff;
+	cursor: crosshair;
 }
 
 .submit {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+	display: flex;
+	justify-content: center;
+	gap: 10px;
 }
 
 .image-section {
-    max-width: 250px;
-    text-align: center;
-    margin: 10px;
+	max-width: 250px;
+	text-align: center;
+	margin: 10px;
   }
 
 @media (max-width: 1215px) {
-    .content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0px;
+	.content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0px;
   }
 
-    .left-column, .right-column, .middle-column {
-        width: 90%;
-        margin: 10px 0;
+	.left-column, .right-column, .middle-column {
+		width: 90%;
+		margin: 10px 0;
   }
 
-    #message {
-        width: 90%;
+	#message {
+		width: 90%;
   }
 
-    #drawingCanvas {
-        width: 90%;
-        height: auto;
+	#drawingCanvas {
+		width: 90%;
+		height: auto;
   }
 }
