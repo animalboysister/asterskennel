@@ -139,26 +139,7 @@ undoButton.addEventListener('click', undo);
 submitButton.addEventListener('click', async () => {
   const imageData = canvas.toDataURL();
   const message = messageInput.value.trim();
-
-  if (!isCanvasDrawn() && !message) {
-    alert('You must draw something or enter a message before submitting!');
-    return;
-  }
-
-  if (isCanvasDrawn() && message) {
-    await sendMessageAndDrawingToDiscord(message, imageData);
-    return;
-  }
-
-  if (message) {
-    await sendMessageToDiscord(message);
-  }
-
-  if (isCanvasDrawn()) {
-    await sendDrawingToDiscord(imageData);
-  }
 });
-
 
 // Submit the drawing and message to Discord Webhook
 submitButton.addEventListener('click', async () => {
