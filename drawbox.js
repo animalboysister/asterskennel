@@ -16,6 +16,25 @@ let brushColor = brushColorInput.value;
 let canvasHistory = [];
 const maxHistory = 10; // Limit the number of states to save memory
 
+// Track canvas size and scaling
+let canvasScale = { x: 1, y: 1 };
+
+// Initialize and adjust the canvas size
+function resizeCanvas() {
+  const { width, height } = canvas.getBoundingClientRect();
+  const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+
+  canvas.width = width;
+  canvas.height = height;
+
+  // Restore the previous content after resizing
+  ctx.putImageData(imageData, 0, 0);
+
+  // Update scale to maintain proper alignment
+  canvasScale.x = canvas.width / width;
+  canvasScale.y = canvas.height / height;
+}
+
 // Save the current state of the canvas
 function saveState() {
   if (canvasHistory.length >= maxHistory) {
@@ -26,8 +45,12 @@ function saveState() {
 
 // Undo the last drawing action
 function undo() {
+  if (canvasHistory.length > 0) {
     const lastState = canvasHistory.pop();
     ctx.putImageData(lastState, 0, 0);
+  } else {
+    alert('Nothing to undo!');
+  }
 }
 
 // Adjust brush size and color dynamically
@@ -39,53 +62,32 @@ brushColorInput.addEventListener('input', () => {
   brushColor = brushColorInput.value;
 });
 
-// Start drawing when mouse is pressed
-canvas.addEventListener('mousedown', (e) => {
+// Get the scaled canvas coordinates
+function getCanvasCoordinates(event) {
+  const rect = canvas.getBoundingClientRect();
+  const x = (event.clientX - rect.left) * canvasScale.x;
+  const y = (event.clientY - rect.top) * canvasScale.y;
+  return { x, y };
+}
+
+// Start drawing
+function startDrawing(event) {
   saveState(); // Save the state before starting a new drawing
   drawing = true;
-  draw(e);
-});
+  draw(event);
+}
 
-// Stop drawing when mouse is released
-canvas.addEventListener('mouseup', () => {
+// Stop drawing
+function stopDrawing() {
   drawing = false;
   ctx.beginPath();
-});
+}
 
 // Draw on the canvas
-canvas.addEventListener('mousemove', (e) => {
-  if (drawing) {
-    draw(e);
-  }
-});
+function draw(event) {
+  if (!drawing) return;
 
-// Start drawing when touch starts
-canvas.addEventListener('touchstart', (e) => {
-  e.preventDefault();
-  saveState(); // Save the state before starting a new drawing
-  drawing = true;
-  draw(e.touches[0]);
-});
-
-// Stop drawing when touch ends
-canvas.addEventListener('touchend', () => {
-  drawing = false;
-  ctx.beginPath();
-});
-
-// Draw on the canvas when touch moves
-canvas.addEventListener('touchmove', (e) => {
-  e.preventDefault();
-  if (drawing) {
-    draw(e.touches[0]);
-  }
-});
-
-// Drawing function
-function draw(e) {
-  const rect = canvas.getBoundingClientRect(); // Get the canvas's position
-  const x = e.clientX - rect.left; // Adjust for canvas position
-  const y = e.clientY - rect.top;  // Adjust for canvas position
+  const { x, y } = getCanvasCoordinates(event);
 
   ctx.lineWidth = brushSize;
   ctx.lineCap = 'round';
@@ -97,6 +99,25 @@ function draw(e) {
   ctx.moveTo(x, y);
 }
 
+// Event listeners for mouse
+canvas.addEventListener('mousedown', startDrawing);
+canvas.addEventListener('mouseup', stopDrawing);
+canvas.addEventListener('mousemove', (event) => {
+  if (drawing) draw(event);
+});
+canvas.addEventListener('mouseout', stopDrawing);
+
+// Event listeners for touch
+canvas.addEventListener('touchstart', (event) => {
+  event.preventDefault();
+  startDrawing(event.touches[0]);
+});
+canvas.addEventListener('touchend', stopDrawing);
+canvas.addEventListener('touchmove', (event) => {
+  event.preventDefault();
+  if (drawing) draw(event.touches[0]);
+});
+
 // Check if the canvas is empty
 function isCanvasDrawn() {
   const empty = document.createElement('canvas');
@@ -104,6 +125,40 @@ function isCanvasDrawn() {
   empty.height = canvas.height;
   return canvas.toDataURL() !== empty.toDataURL();
 }
+
+// Resize the canvas on window resize
+window.addEventListener('resize', resizeCanvas);
+
+// Initialize canvas size
+resizeCanvas();
+
+// Undo button event listener
+undoButton.addEventListener('click', undo);
+
+// Submit button event listener (unchanged)
+submitButton.addEventListener('click', async () => {
+  const imageData = canvas.toDataURL();
+  const message = messageInput.value.trim();
+
+  if (!isCanvasDrawn() && !message) {
+    alert('You must draw something or enter a message before submitting!');
+    return;
+  }
+
+  if (isCanvasDrawn() && message) {
+    await sendMessageAndDrawingToDiscord(message, imageData);
+    return;
+  }
+
+  if (message) {
+    await sendMessageToDiscord(message);
+  }
+
+  if (isCanvasDrawn()) {
+    await sendDrawingToDiscord(imageData);
+  }
+});
+
 
 // Submit the drawing and message to Discord Webhook
 submitButton.addEventListener('click', async () => {
