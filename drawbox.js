@@ -45,12 +45,8 @@ function saveState() {
 
 // Undo the last drawing action
 function undo() {
-  if (canvasHistory.length > 0) {
-    const lastState = canvasHistory.pop();
-    ctx.putImageData(lastState, 0, 0);
-  } else {
-    alert('Nothing to undo!');
-  }
+  const lastState = canvasHistory.pop();
+  ctx.putImageData(lastState, 0, 0);
 }
 
 // Adjust brush size and color dynamically
