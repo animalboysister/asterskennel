@@ -264,6 +264,10 @@ ul, ol {
 	gap: 10px;
 }
 
+.website-button {
+	margin: 0 0 0 auto;
+}
+
 .image-section {
 	max-width: 250px;
 	text-align: center;
