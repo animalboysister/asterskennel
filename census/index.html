@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="aster's kennel!">
+  <meta property="og:description" content="aster's home on the net!">
+  <meta property="og:image" content="https://animalboysister.zoolandia.org/images/profilepic.png">
+  <meta property="og:url" content="https://animalboysister.zoolandia.org">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="aster's kennel!">
+  <title>aster's kennel!</title>
+  <link rel="icon" href="favicon.ico">
+  <link href="censusstyle.css" rel="stylesheet">
+</head>
+<body>
+    <div class="content">
+            <div class="window">
+                <div class="title-bar">
+                    <h2>2024 Zoo Census</h2>
+                </div>
+                <div class="workspace">
+                    <p>
+                        Welcome to the 2024 Zoo Census. All responses to this form will be anonymous. Please answer as many questions as you feel comfortable, though no questions are required.
+                    </p>
+                    <form action="https://formspree.io/f/movvenln" method="POST">
+                        <h3>Consent</h3>
+                        <p>
+                            By submitting this form, you consent to your responses being used exclusively for aggregate data analysis. This means that your individual answers will not be shared or published
+                            in any way that identifies you personally. The information collected will be combined with other responses to understand broader community trends and insights.
+                        </p>
+                        <p>
+                           If you have any questions or concerns about how your data will be used, please feel free to contact me at animalboysister@zoolandia.org.
+                        </p>
+                        <h3>About You</h3>
+                        <label class="question" for="age">how old are you?</label><br>
+                        <input type="text" id="age" name="age"><br><br>
+
+                        <label class="question" for="gender">What gender do you identify as?</label><br>
+                        <input type="radio" id="male" name="gender" value="male" required>
+                        <label>Male</label><br>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label>Female</label><br>
+                        <input type="radio" id="transgender-male" name="gender" value="transgender-male">
+                        <label>Transgender Male</label><br>
+                        <input type="radio" id="transgender-female" name="gender" value="transgender-female">
+                        <label>Transgender Female</label><br>
+                        <input type="radio" id="non-binary" name="gender" value="non-binary">
+                        <label>Non-Binary</label><br>
+                        <input type="radio" id="other" name="gender" value="other">
+                        <label>Other:</label>
+                        <input type="text" id="gender-other-text" name="gender-other" placeholder="Please specify" disabled><br><br>
+
+                        <label class="question" for="nationality">What is your nationality?</label><br>
+                        <input type="text" id="nationality" name="nationality"><br><br>
+
+                        <label class="question" for="term">What term do you prefer to use to describe your attraction?</label><br>
+                        <input type="radio" id="zoo" name="term" value="zoo" required>
+                        <label>Zoo</label><br>
+                        <input type="radio" id="zoophile" name="term" value="zoophile">
+                        <label>Zoophile</label><br>
+                        <input type="radio" id="zoosexual" name="term" value="zoosexual">
+                        <label>Zoosexual</label><br>
+                        <input type="radio" id="bestialist" name="term" value="bestialist">
+                        <label>Bestialist</label><br>
+                        <input type="radio" id="no-preference" name="term" value="no-preference">
+                        <label>No Preference</label><br>
+                        <input type="radio" id="other" name="term" value="other">
+                        <label>Other:</label>
+                        <input type="text" id="term-other-text" name="term-other" placeholder="Please specify" disabled><br><br>
+
+                        <label class="question" for="sexually-zoo-exclusive">Are you sexually zoo-exclusive, i.e. not sexually attracted to humans?</label><br>
+                        <input type="radio" id="yes" name="sexually-zoo-exclusive" value="yes">
+                        <label>Yes</label><br>
+                        <input type="radio" id="no" name="sexually-zoo-exclusive" value="no">
+                        <label>No</label><br>
+                        <input type="radio" id="other" name="sexually-zoo-exclusive" value="other">
+                        <label>Other:</label>
+                        <input type="text" id="sexually-zoo-exclusive-other-text" name="sexually-zoo-exclusive-other" placeholder="Please specify" disabled><br><br>
+
+                        <label class="question" for="romantically-zoo-exclusive">Are you romantically zoo-exclusive, i.e. not romantically attracted to humans?</label><br>
+                        <input type="radio" id="yes" name="romantically-zoo-exclusive" value="yes">
+                        <label>Yes</label><br>
+                        <input type="radio" id="no" name="romantically-zoo-exclusive" value="no">
+                        <label>No</label><br>
+                        <input type="radio" id="other" name="romantically-zoo-exclusive" value="other">
+                        <label>Other:</label>
+                        <input type="text" id="romantically-zoo-exclusive-other-text" name="romantically-zoo-exclusive-other" placeholder="Please specify" disabled><br><br>
+
+                        <label class="question" for="primary-species-attraction">What is your primary species of attraction?</label><br>
+                        <input type="text" id="primary-species-attraction" name="primary-species-attraction"><br><br>
+
+                        <label class="question" for="other-species-attraction">What species aside from your primary species of attraction are you attracted to?</label><br>
+                        <input type="text" id="other-species-attraction" name="other-species-attraction"><br><br>
+
+                        <label class="question" for="other-species">Do you identify with a species other than human?</label><br>
+                        <input type="radio" id="human" name="other-species" value="human">
+                        <label>No, I identify as a human</label><br>
+                        <input type="radio" id="therian" name="other-species" value="therian">
+                        <label>Yes, I identify as a therian</label><br>
+                        <input type="radio" id="otherkin" name="other-species" value="otherkin">
+                        <label>Yes, I identify as an otherkin</label><br>
+                        <input type="radio" id="other" name="other-species" value="other">
+                        <label>Other:</label>
+                        <input type="text" id="other-species-other-text" name="zoo-exclusive-other" placeholder="Please specify" disabled><br><br>
+
+                        <button type="submit" class="button">submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('change', event => {
+                const groupName = event.target.name; // Get the radio button group
+                const otherRadio = document.querySelector(`input[name="${groupName}"][value="other"]`);
+                const otherTextInput = document.getElementById(`${groupName}-other-text`);
+
+                if (otherRadio && otherTextInput) {
+                    otherTextInput.disabled = !otherRadio.checked;
+                    if (!otherRadio.checked) {
+                        otherTextInput.value = ''; // Clear the input when disabled
+                    }
+                }
+            });
+        });
+    </script>
+</body>
