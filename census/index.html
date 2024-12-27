@@ -139,8 +139,8 @@
                         <label>Other:</label>
                         <input type="text" id="income-other-text" name="income-other" placeholder="Please specify" disabled><br><br>
 
-                        <label class="question" for="location">What is your current religeous background?</label><br>
-                        <input type="text" id="religeon" name="religeon"><br><br>
+                        <label class="question" for="religion">What is your religious background?</label><br>
+                        <input type="text" id="religion" name="religion"><br><br>
 
                         <label class="question" for="political-views">What are your political views?</label><br>
                         <input type="text" id="political-views" name="political-views"><br><br>
@@ -156,12 +156,64 @@
 
                         <label class="question" for="mental-health-problem">If you answered 'yes' to the previous question, what were you diagnosed with?</label><br>
                         <input type="text" id="mental-health-problem" name="mental-health-problem"><br><br>
+                        
+                        <label class="question" for="vegan-vegetarian">Are you a vegan or vegetarian?</label><br>
+                        <input type="radio" id="vegetarian" name="vegan-vegetarian" value="vegetarian">
+                        <label>Yes, I'm a vegetarian</label><br>
+                        <input type="radio" id="vegan" name="vegan-vegetarian" value="vegan">
+                        <label>Yes, I'm a vegan</label><br>
+                        <input type="radio" id="no" name="vegan-vegetarian" value="no">
+                        <label>No</label><br>
+                        <input type="radio" id="other" name="vegan-vegetarian" value="other">
+                        <label>Other:</label>
+                        <input type="text" id="vegan-vegetarian-other-text" name="vegan-vegetarian-other" placeholder="Please specify" disabled><br><br>
+
+                        <label class="question" for="vegan-vegetarian-reason">If you answered 'yes' to previous question, why are you a vegan or vegetarian?</label><br>
+                        <input type="text" id="vegan-vegetarian-reason" name="vegan-vegetarian-reason"><br><br>
+
+                        <label class="question" for="furry">Do you identify as a furry?</label><br>
+                        <input type="radio" id="yes" name="furry" value="yes">
+                        <label>Yes</label><br>
+                        <input type="radio" id="no" name="furry" value="no">
+                        <label>No</label><br>
+                        <input type="radio" id="other" name="furry" value="other">
+                        <label>Other:</label>
+                        <input type="text" id="furry-other-text" name="furry-other" placeholder="Please specify" disabled><br><br>
+
+                        <label class="question" for="fursona-species">If you answered 'yes' to previous question, what species is your fursona?</label><br>
+                        <input type="text" id="fursona-species" name="fursona-species"><br><br>
+
+                        <label class="question" for="other-species">Do you identify with a species other than human?</label><br>
+                        <input type="radio" id="human" name="other-species" value="human">
+                        <label>No, I identify as a human</label><br>
+                        <input type="radio" id="therian" name="other-species" value="therian">
+                        <label>Yes, I identify as a therian</label><br>
+                        <input type="radio" id="otherkin" name="other-species" value="otherkin">
+                        <label>Yes, I identify as an otherkin</label><br>
+                        <input type="radio" id="other" name="other-species" value="other">
+                        <label>Other:</label>
+                        <input type="text" id="other-species-other-text" name="zoo-exclusive-other" placeholder="Please specify" disabled><br><br>
+
+                        <label class="question" for="other-species-species">If you answered 'yes' to previous question, what species do you identify with?</label><br>
+                        <input type="text" id="other-species-species" name="other-species-species"><br><br>
+
+                        <label class="question" for="life-satisfaction">In general, how satisfied have you been with your life during past 12 months?</label><br>
+                        <input type="radio" id="5" name="life-satisfaction" value="5">
+                        <label>Extremely satisfied</label><br>
+                        <input type="radio" id="4" name="life-satisfaction" value="4">
+                        <label>Very satisfied</label><br>
+                        <input type="radio" id="3" name="life-satisfaction" value="3">
+                        <label>Generally satisfied</label><br>
+                        <input type="radio" id="2" name="life-satisfaction" value="2">
+                        <label>Sometimes unsatisfied</label><br>
+                        <input type="radio" id="1" name="life-satisfaction" value="1">
+                        <label>Mostly unsatisfied</label><br><br>
 
                         <h3>About Your Attraction</h3>
                         <label class="question" for="human-sexual-orientation">What is your sexual orientation toward humans?</label><br>
                         <input type="radio" id="heterosexual" name="human-sexual-orientation" value="heterosexual">
                         <label>Heterosexual</label><br>
-                        <input type="radio" id="homosexual" name="human-sexual-orientation" value="homosexual"</label>
+                        <input type="radio" id="homosexual" name="human-sexual-orientation" value="homosexual">
                         <label>Homosexual</label><br>
                         <input type="radio" id="bisexual" name="human-sexual-orientation" value="bisexual">
                         <label>Bisexual</label><br>
@@ -219,33 +271,6 @@
 
                         <label class="question" for="other-species-attraction">What species aside from your primary species of attraction are you attracted to?</label><br>
                         <input type="text" id="other-species-attraction" name="other-species-attraction"><br><br>
-
-                        <label class="question" for="furry">Do you identify as a furry?</label><br>
-                        <input type="radio" id="yes" name="furry" value="yes">
-                        <label>Yes</label><br>
-                        <input type="radio" id="no" name="furry" value="no">
-                        <label>No</label><br>
-                        <input type="radio" id="other" name="furry" value="other">
-                        <label>Other:</label>
-                        <input type="text" id="furry-other-text" name="furry-other" placeholder="Please specify" disabled><br><br>
-
-                        <label class="question" for="fursona-species">If you answered 'yes' to previous question, what species is your fursona?</label><br>
-                        <input type="text" id="fursona-species" name="fursona-species"><br><br>
-
-
-                        <label class="question" for="other-species">Do you identify with a species other than human?</label><br>
-                        <input type="radio" id="human" name="other-species" value="human">
-                        <label>No, I identify as a human</label><br>
-                        <input type="radio" id="therian" name="other-species" value="therian">
-                        <label>Yes, I identify as a therian</label><br>
-                        <input type="radio" id="otherkin" name="other-species" value="otherkin">
-                        <label>Yes, I identify as an otherkin</label><br>
-                        <input type="radio" id="other" name="other-species" value="other">
-                        <label>Other:</label>
-                        <input type="text" id="other-species-other-text" name="zoo-exclusive-other" placeholder="Please specify" disabled><br><br>
-
-                        <label class="question" for="other-species-species">If you answered 'yes' to previous question, what species do you identify with?</label><br>
-                        <input type="text" id="other-species-species" name="other-species-species"><br><br>
 
                         <button type="submit" class="button">submit</button>
                     </form>
