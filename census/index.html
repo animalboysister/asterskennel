@@ -146,7 +146,7 @@
                         <input type="text" id="political-views" name="political-views"><br><br>
 
                         <label class="question" for="mental-health">Have you ever been diagnosed with a mental health problem?</label><br>
-                        <input type="radio" id="yes" name="mental-healthe" value="yes">
+                        <input type="radio" id="yes" name="mental-health" value="yes">
                         <label>Yes</label><br>
                         <input type="radio" id="no" name="mental-health" value="no">
                         <label>No</label><br>
@@ -254,6 +254,12 @@
         </div>
     </div>
     <script>
+        window.onbeforeunload = () => {
+        for(const form of document.getElementsByTagName('form')) {
+            form.reset();
+        }
+        }
+        
         document.querySelectorAll('form').forEach(form => {
             form.addEventListener('change', event => {
                 const groupName = event.target.name; // Get the radio button group
