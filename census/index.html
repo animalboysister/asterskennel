@@ -10,7 +10,7 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="aster's kennel!">
   <title>aster's kennel!</title>
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="/favicon.ico">
   <link href="censusstyle.css" rel="stylesheet">
 </head>
 <body>
@@ -21,7 +21,8 @@
                 </div>
                 <div class="workspace">
                     <p>
-                        Welcome to the 2024 Zoo Census. All responses to this form will be anonymous. Please answer as many questions as you feel comfortable, though no questions are required.
+                        Welcome to the 2024 Zoo Census. All responses to this form will be anonymous. Please answer as many questions as you feel comfortable, though no questions are required. If a question
+                        is not applicable to you or you would prefer not to answer, please leave it blank.
                     </p>
                     <form action="https://formspree.io/f/movvenln" method="POST">
                         <h3>Consent</h3>
@@ -30,14 +31,14 @@
                             in any way that identifies you personally. The information collected will be combined with other responses to understand broader community trends and insights.
                         </p>
                         <p>
-                           If you have any questions or concerns about how your data will be used, please feel free to contact me at animalboysister@zoolandia.org.
+                           If you have any questions or concerns about how your data will be used, please feel free to contact me at aster@zoolandia.org.
                         </p>
                         <h3>About You</h3>
-                        <label class="question" for="age">how old are you?</label><br>
+                        <label class="question" for="age">How old are you?</label><br>
                         <input type="text" id="age" name="age"><br><br>
 
                         <label class="question" for="gender">What gender do you identify as?</label><br>
-                        <input type="radio" id="male" name="gender" value="male" required>
+                        <input type="radio" id="male" name="gender" value="male">
                         <label>Male</label><br>
                         <input type="radio" id="female" name="gender" value="female">
                         <label>Female</label><br>
@@ -51,11 +52,137 @@
                         <label>Other:</label>
                         <input type="text" id="gender-other-text" name="gender-other" placeholder="Please specify" disabled><br><br>
 
+                        <label class="question" for="race">What is your race/ethnicity?</label><br>
+                        <input type="text" id="race" name="race"><br><br>
+                        
                         <label class="question" for="nationality">What is your nationality?</label><br>
                         <input type="text" id="nationality" name="nationality"><br><br>
 
-                        <label class="question" for="term">What term do you prefer to use to describe your attraction?</label><br>
-                        <input type="radio" id="zoo" name="term" value="zoo" required>
+                        <label class="question" for="location">What is your current country of residence?</label><br>
+                        <input type="text" id="location" name="location"><br><br>
+
+                        <label class="question" for="relationship-status">What is your relationship status? (Select all that apply)</label><br>
+                        <input type="checkbox" id="single" name="relationship-status" value="single">
+                        <label>Single</label><br>
+                        <input type="checkbox" id="human-relationship" name="relationship-status" value="human-relationship">
+                        <label>In a relationship with a human</label><br>
+                        <input type="checkbox" id="non-human-relationship" name="relationship-status" value="non-human-relationship">
+                        <label>In a relationship with a non-human</label><br>
+                        <input type="checkbox" id="poly-human-relationship" name="relationship-status" value="poly-human-relationship">
+                        <label>In a relationship with multiple humans</label><br>
+                        <input type="checkbox" id="poly-non-human-relationship" name="relationship-status" value="poly-non-human-relationship">
+                        <label>In a relationship with multiple non-humans</label><br>
+                        <input type="checkbox" id="married" name="relationship-status" value="married">
+                        <label>Married</label><br>
+                        <input type="checkbox" id="divorced" name="relationship-status" value="divorced">
+                        <label>Divorced</label><br>
+                        <input type="checkbox" id="widowed" name="relationship-status" value="widowed">
+                        <label>Widowed</label><br>
+                        <input type="checkbox" id="other" name="relationship-status" value="other">
+                        <label>Other:</label>
+                        <input type="text" id="relationship-status-other-text" name="relationship-status-other" placeholder="Please specify" disabled><br><br>
+
+                        <label class="question" for="living-situation">Who do you currently live with? (Select all that apply)</label><br>
+                        <input type="checkbox" id="alone" name="living-situation" value="alone">
+                        <label>Alone</label><br>
+                        <input type="checkbox" id="parents" name="living-situation" value="family">
+                        <label>Parents</label><br>
+                        <input type="checkbox" id="children" name="living-situation" value="children">
+                        <label>Children</label><br>
+                        <input type="checkbox" id="pets" name="living-situation" value="pets">
+                        <label>Pets</label><br>
+                        <input type="checkbox" id="roommates" name="living-situation" value="roommates">
+                        <label>Roommates</label><br>
+                        <input type="checkbox" id="human-partner" name="living-situation" value="human-partner">
+                        <label>Human Partner</label><br>
+                        <input type="checkbox" id="non-human-partner" name="living-situation" value="non-human-partner">
+                        <label>Non-Human Partner</label><br>
+                        <input type="checkbox" id="spouse" name="living-situation" value="spouse">
+                        <label>Spouse</label><br>
+                        <input type="checkbox" id="other" name="living-situation" value="other">
+                        <label>Other:</label>
+                        <input type="text" id="living-situation-other-text" name="living-situation-other" placeholder="Please specify" disabled><br><br>
+
+                        <label class="question" for="education-level">What is your highest level of eduation?</label><br>
+                        <input type="radio" id="below-high-school" name="education-level" value="below-high-school">
+                        <label>Below High School</label><br>
+                        <input type="radio" id="some-high-school" name="education-level" value="some-high-school">
+                        <label>Some High School</label><br>
+                        <input type="radio" id="high-school" name="education-level" value="high-school">
+                        <label>High School</label><br>
+                        <input type="radio" id="some-college" name="education-level" value="some-college">
+                        <label>Some University</label><br>
+                        <input type="radio" id="associates" name="education-level" value="associates">
+                        <label>Bachelor's Degree</label><br>
+                        <input type="radio" id="masters" name="education-level" value="masters">
+                        <label>Master's Degree</label><br>
+                        <input type="radio" id="doctorate" name="education-level" value="doctorate">
+                        <label>Doctorate Degree</label><br>
+                        <input type="radio" id="other" name="education-level" value="other">
+                        <label>Other:</label>
+                        <input type="text" id="education-level-other-text" name="education-level-other" placeholder="Please specify" disabled><br><br>
+
+                        <label class="question" for="income">How would you describe your current income level</label><br>
+                        <input type="radio" id="poverty" name="income" value="poverty">
+                        <label>Poverty</label><br>
+                        <input type="radio" id="lower-income" name="income" value="lower-income">
+                        <label>Lower Income</label><br>
+                        <input type="radio" id="lower-middle-income" name="income" value="lower-middle-income">
+                        <label>Lower-Middle Income</label><br>
+                        <input type="radio" id="middle-income" name="income" value="middle-income">
+                        <label>Middle Income</label><br>
+                        <input type="radio" id="upper-middle-income" name="income" value="upper-middle-income">
+                        <label>Upper-Middle Income</label><br>
+                        <input type="radio" id="upper-income" name="income" value="upper-income">
+                        <label>Upper Income</label><br>
+                        <input type="radio" id="other" name="income" value="other">
+                        <label>Other:</label>
+                        <input type="text" id="income-other-text" name="income-other" placeholder="Please specify" disabled><br><br>
+
+                        <label class="question" for="location">What is your current religeous background?</label><br>
+                        <input type="text" id="religeon" name="religeon"><br><br>
+
+                        <label class="question" for="political-views">What are your political views?</label><br>
+                        <input type="text" id="political-views" name="political-views"><br><br>
+
+                        <label class="question" for="mental-health">Have you ever been diagnosed with a mental health problem?</label><br>
+                        <input type="radio" id="yes" name="mental-healthe" value="yes">
+                        <label>Yes</label><br>
+                        <input type="radio" id="no" name="mental-health" value="no">
+                        <label>No</label><br>
+                        <input type="radio" id="other" name="mental-health" value="other">
+                        <label>Other:</label>
+                        <input type="text" id="mental-health-other-text" name="mental-health-other" placeholder="Please specify" disabled><br><br>
+
+                        <label class="question" for="mental-health-problem">If you answered 'yes' to the previous question, what were you diagnosed with?</label><br>
+                        <input type="text" id="mental-health-problem" name="mental-health-problem"><br><br>
+
+                        <h3>About Your Attraction</h3>
+                        <label class="question" for="human-sexual-orientation">What is your sexual orientation toward humans?</label><br>
+                        <input type="radio" id="heterosexual" name="human-sexual-orientation" value="heterosexual">
+                        <label>Heterosexual</label><br>
+                        <input type="radio" id="homosexual" name="human-sexual-orientation" value="homosexual"</label>
+                        <label>Homosexual</label><br>
+                        <input type="radio" id="bisexual" name="human-sexual-orientation" value="bisexual">
+                        <label>Bisexual</label><br>
+                        <input type="radio" id="other" name="human-sexual-orientation" value="other">
+                        <label>Other:</label>
+                        <input type="text" id="human-sexual-orientation-other-text" name="human-sexual-orientation-other" placeholder="Please specify" disabled><br><br>
+
+                        <label class="question" for="non-human-sexual-orientation">What is your sexual orientation toward non-humans?</label><br>
+                        <input type="radio" id="heterosexual" name="non-human-sexual-orientation" value="heterosexual">
+                        <label>Heterosexual</label><br>
+                        <input type="radio" id="homosexual" name="non-human-sexual-orientation" value="homosexual"</label>
+                        <label>Homosexual</label><br>
+                        <input type="radio" id="bisexual" name="non-human-sexual-orientation" value="bisexual">
+                        <label>Bisexual</label><br>
+                        <input type="radio" id="other" name="non-human-sexual-orientation" value="other">
+                        <label>Other:</label>
+                        <input type="text" id="non-human-sexual-orientation-other-text" name="non-human-sexual-orientation-other" placeholder="Please specify" disabled><br><br>
+
+
+                        <label class="question" for="term">What term do you prefer to use to describe your attraction to non-humans?</label><br>
+                        <input type="radio" id="zoo" name="term" value="zoo">
                         <label>Zoo</label><br>
                         <input type="radio" id="zoophile" name="term" value="zoophile">
                         <label>Zoophile</label><br>
@@ -93,6 +220,19 @@
                         <label class="question" for="other-species-attraction">What species aside from your primary species of attraction are you attracted to?</label><br>
                         <input type="text" id="other-species-attraction" name="other-species-attraction"><br><br>
 
+                        <label class="question" for="furry">Do you identify as a furry?</label><br>
+                        <input type="radio" id="yes" name="furry" value="yes">
+                        <label>Yes</label><br>
+                        <input type="radio" id="no" name="furry" value="no">
+                        <label>No</label><br>
+                        <input type="radio" id="other" name="furry" value="other">
+                        <label>Other:</label>
+                        <input type="text" id="furry-other-text" name="furry-other" placeholder="Please specify" disabled><br><br>
+
+                        <label class="question" for="fursona-species">If you answered 'yes' to previous question, what species is your fursona?</label><br>
+                        <input type="text" id="fursona-species" name="fursona-species"><br><br>
+
+
                         <label class="question" for="other-species">Do you identify with a species other than human?</label><br>
                         <input type="radio" id="human" name="other-species" value="human">
                         <label>No, I identify as a human</label><br>
@@ -103,6 +243,9 @@
                         <input type="radio" id="other" name="other-species" value="other">
                         <label>Other:</label>
                         <input type="text" id="other-species-other-text" name="zoo-exclusive-other" placeholder="Please specify" disabled><br><br>
+
+                        <label class="question" for="other-species-species">If you answered 'yes' to previous question, what species do you identify with?</label><br>
+                        <input type="text" id="other-species-species" name="other-species-species"><br><br>
 
                         <button type="submit" class="button">submit</button>
                     </form>
