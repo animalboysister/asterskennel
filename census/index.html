@@ -8,7 +8,7 @@
   <meta property="og:image" content="https://animalboysister.zoolandia.org/images/zooflag.png">
   <meta property="og:url" content="https://animalboysister.zoolandia.org">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="aster's kennel!">
+  <meta name="twitter:title" content="2024 Zoo Census">
   <title>aster's kennel!</title>
   <link rel="icon" href="favicon.ico">
   <link href="style.css" rel="stylesheet">
@@ -292,7 +292,7 @@
                         <label class="question" for="awakening-age">At what age did you first have sexual or romantic feelings towards a non-human animal?</label><br>
                         <input type="text" id="awakening-age" name="awakening-age"><br><br>
 
-                        <label class="question" for="acceptance-age">At what age did you first identify yourself as a zoo?</label><br>
+                        <label class="question" for="acceptance-age">At what age did you first identify as a zoo?</label><br>
                         <input type="text" id="acceptance-age" name="acceptance-age"><br><br>
 
                         <label class="question" for="practising">Have you ever engaged in sexual activity with a non-human animal?</label><br>
@@ -303,6 +303,12 @@
                         <input type="radio" id="other" name="practising" value="other">
                         <label>Other:</label>
                         <input type="text" id="practising-other-text" name="practising-other" placeholder="Please specify" disabled><br><br>
+
+                        <label class="question" for="consent">In what ways can you tell that an animal wants to have sex with you?</label><br>
+                        <input type="text" id="content" name="consent"><br><br>
+
+                        <label class="question" for="most-attractive-aspect">What is the most attractive aspect of non-human animals to you?</label><br>
+                        <input type="text" id="most-attractive-aspect" name="most-attractive-aspect"><br><br>
 
                         <label class="question" for="paraphilias">Not including being a zoo, what paraphilias do you have?</label><br>
                         <input type="text" id="paraphilias" name="paraphilias"><br><br>
@@ -414,16 +420,19 @@
                         <label class="question" for="out-as-zoo-reaction">How did the people you came out to react to you being a zoo?</label><br>
                         <input type="text" id="out-as-zoo-reaction" name="out-as-zoo-reaction"><br><br>
 
-                        <label class="question" for="ethical">Do you think that sexual activity with non-human animals can be ethical?</label><br>
-                        <input type="radio" id="yes" name="ethical" value="yes">
+                        <label class="question" for="ethical">How do you define "ethical" in relation to being a zoo?</label><br>
+                        <input type="text" id="ethical" name="ethical"><br><br>
+
+                        <label class="question" for="sex-ethical">Do you think that sexual activity with non-human animals can be ethical?</label><br>
+                        <input type="radio" id="yes" name="sex-ethical" value="yes">
                         <label>Yes</label><br>
-                        <input type="radio" id="no" name="ethical" value="no">
+                        <input type="radio" id="no" name="sex-ethical" value="no">
                         <label>No</label><br>
-                        <input type="radio" id="other" name="ethical" value="other">
+                        <input type="radio" id="other" name="sex-ethical" value="other">
                         <label>Other:</label>
                         <input type="text" id="ethical-other-text" name="ethical-other" placeholder="Please specify" disabled><br><br>
 
-                        <label class="question" for="pornography-ethical">Do you think that pornography involving sexual activity with non-human animals can be ethical?</label><br>
+                        <label class="question" for="pornography-ethical">Do you think that pornography involving sexual activity with animals can be ethical?</label><br>
                         <input type="radio" id="yes" name="pornography-ethical" value="yes">
                         <label>Yes</label><br>
                         <input type="radio" id="no" name="pornography-ethical" value="no">
@@ -432,16 +441,25 @@
                         <label>Other:</label>
                         <input type="text" id="pornography-ethical-other-text" name="pornography-ethical-other" placeholder="Please specify" disabled><br><br>
 
-                        <label class="question" for="zeta">Are you familiar with the Zeta Principles?</label><br>
-                        <input type="radio" id="yes" name="zeta" value="yes">
+                        <label class="question" for="fencehopping-ethical">Do you think that sexual activity with someone else's animals can be ethical?</label><br>
+                        <input type="radio" id="yes" name="fencehopping-ethical" value="yes">
                         <label>Yes</label><br>
-                        <input type="radio" id="no" name="zeta" value="no">
+                        <input type="radio" id="no" name="fencehopping-ethical" value="no">
                         <label>No</label><br>
-                        <input type="radio" id="other" name="zeta" value="other">
+                        <input type="radio" id="other" name="fencehopping-ethical" value="other">
                         <label>Other:</label>
-                        <input type="text" id="zeta-other-text" name="zeta-other" placeholder="Please specify" disabled><br><br>
+                        <input type="text" id="fencehopping-ethical-other-text" name="fencehopping-ethical-other" placeholder="Please specify" disabled><br><br>
 
-                        <label class="question" for="zeta-principles">Do you generally agree with the Zeta Principles?</label><br>
+                        <label class="question" for="human-superiority">Do you believe that humans are superior to non-human animals?</label><br>
+                        <input type="radio" id="yes" name="human-superiority" value="yes">
+                        <label>Yes</label><br>
+                        <input type="radio" id="no" name="human-superiority" value="no">
+                        <label>No</label><br>
+                        <input type="radio" id="other" name="human-superiority" value="other">
+                        <label>Other:</label>
+                        <input type="text" id="human-superiority-other-text" name="human-superiority-other" placeholder="Please specify" disabled><br><br>
+
+                        <label class="question" for="zeta-principles">Are you familiar with the Zeta Principles?</label><br>
                         <input type="radio" id="yes" name="zeta-principles" value="yes">
                         <label>Yes</label><br>
                         <input type="radio" id="no" name="zeta-principles" value="no">
@@ -450,11 +468,38 @@
                         <label>Other:</label>
                         <input type="text" id="zeta-principles-other-text" name="zeta-principles-other" placeholder="Please specify" disabled><br><br>
 
+                        <label class="question" for="agree-zeta-principles">Do you generally agree with the Zeta Principles?</label><br>
+                        <input type="radio" id="yes" name="agree-zeta-principles" value="yes">
+                        <label>Yes</label><br>
+                        <input type="radio" id="no" name="agree-zeta-principles" value="no">
+                        <label>No</label><br>
+                        <input type="radio" id="other" name="agree-zeta-principles" value="other">
+                        <label>Other:</label>
+                        <input type="text" id="agree-zeta-principles-other-text" name="agree-zeta-principles-other" placeholder="Please specify" disabled><br><br>
+
                         <label class="question" for="change-zeta-principles">What changes, if any, would you make to the Zeta Principles?</label><br>
                         <input type="text" id="change-zeta-principles" name="change-zeta-principles"><br><br>
 
-                        <label class="question" for="zoo-paraphilia">Do you consider being a zoo to be a paraphilia? Why or why not?</label><br>
-                        <input type="text" id="zoo-paraphilia" name="zoo-paraphilia"><br><br>
+                        <label class="question" for="zoo-paraphilia">Do you consider being a zoo to be a paraphilia?</label><br>
+                        <input type="radio" id="yes" name="zoo-paraphilia" value="yes">
+                        <label>Yes</label><br>
+                        <input type="radio" id="no" name="zoo-paraphilia" value="no">
+                        <label>No</label><br>
+                        <input type="radio" id="other" name="zoo-paraphilia" value="other">
+                        <label>Other:</label>
+                        <input type="text" id="zoo-paraphilia-other-text" name="zoo-paraphilia-other" placeholder="Please specify" disabled><br><br>
+
+                        <label class="question" for="zoo-sexuality">Do you consider being a zoo to be a sexuality?</label><br>
+                        <input type="radio" id="yes" name="zoo-sexuality" value="yes">
+                        <label>Yes</label><br>
+                        <input type="radio" id="no" name="zoo-sexuality" value="no">
+                        <label>No</label><br>
+                        <input type="radio" id="other" name="zoo-sexuality" value="other">
+                        <label>Other:</label>
+                        <input type="text" id="zoo-sexuality-other-text" name="zoo-sexuality-other" placeholder="Please specify" disabled><br><br>
+
+                        <label class="question" for="most-important-issue">What do you think the most important issue is for the zoo community to address?</label><br>
+                        <input type="text" id="most-important-issue" name="most-important-issue"><br><br>
 
                         <button type="submit" class="button">submit</button>
                     </form>
