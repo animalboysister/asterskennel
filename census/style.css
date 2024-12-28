@@ -16,6 +16,7 @@ body {
 p {
 	line-height: 1.4;
 	margin: 10px 0;
+    text-align: justify;
 }
 
 h1, h2, h3 {

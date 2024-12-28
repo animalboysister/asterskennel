@@ -29,7 +29,7 @@
                         <p>
                             By submitting this form, you consent to your responses being used exclusively for aggregate data analysis. This means that your individual answers will not be shared or published
                             in any way that identifies you personally. The information collected will be combined with other responses to understand broader community trends and insights. Information specific
-                            to one individual will be omitted from data analyses to avoid identification. The results of this census will be shared publicly on my website, animalboysister.zoolandia.org, and
+                            to an individual will be omitted from data analyses to avoid identification. The results of this census will be shared publicly on my website, animalboysister.zoolandia.org, and
                             the Zooey Dot Pub magazine. 
                         </p>
                         <p>
@@ -304,6 +304,9 @@
                         <label>Other:</label>
                         <input type="text" id="practising-other-text" name="practising-other" placeholder="Please specify" disabled><br><br>
 
+                        <label class="question" for="practice-age">If you answered yes to the previous question, at what age did you first engage in sexual activity with an animal?</label><br>
+                        <input type="text" id="practice-age" name="practice-age"><br><br>
+
                         <label class="question" for="consent">In what ways can you tell that an animal wants to have sex with you?</label><br>
                         <input type="text" id="content" name="consent"><br><br>
 
@@ -383,6 +386,24 @@
                         <input type="radio" id="other" name="term" value="other">
                         <label>Other:</label>
                         <input type="text" id="term-other-text" name="term-other" placeholder="Please specify" disabled><br><br>
+                        
+                        <label class="question" for="zoo-sexuality">Do you consider being a zoo to be a sexuality?</label><br>
+                        <input type="radio" id="yes" name="zoo-sexuality" value="yes">
+                        <label>Yes</label><br>
+                        <input type="radio" id="no" name="zoo-sexuality" value="no">
+                        <label>No</label><br>
+                        <input type="radio" id="other" name="zoo-sexuality" value="other">
+                        <label>Other:</label>
+                        <input type="text" id="zoo-sexuality-other-text" name="zoo-sexuality-other" placeholder="Please specify" disabled><br><br>
+
+                        <label class="question" for="zoo-paraphilia">Do you consider being a zoo to be a paraphilia?</label><br>
+                        <input type="radio" id="yes" name="zoo-paraphilia" value="yes">
+                        <label>Yes</label><br>
+                        <input type="radio" id="no" name="zoo-paraphilia" value="no">
+                        <label>No</label><br>
+                        <input type="radio" id="other" name="zoo-paraphilia" value="other">
+                        <label>Other:</label>
+                        <input type="text" id="zoo-paraphilia-other-text" name="zoo-paraphilia-other" placeholder="Please specify" disabled><br><br>
 
                         <label class="question" for="zoo-acceptance">Do you think that being a zoo will ever be accepted by society at large?</label><br>
                         <input type="radio" id="yes" name="zoo-acceptance" value="yes">
@@ -420,7 +441,7 @@
                         <label class="question" for="out-as-zoo-reaction">How did the people you came out to react to you being a zoo?</label><br>
                         <input type="text" id="out-as-zoo-reaction" name="out-as-zoo-reaction"><br><br>
 
-                        <label class="question" for="ethical">How do you define "ethical" in relation to being a zoo?</label><br>
+                        <label class="question" for="ethical">How do you define 'ethical' in relation to being a zoo?</label><br>
                         <input type="text" id="ethical" name="ethical"><br><br>
 
                         <label class="question" for="sex-ethical">Do you think that sexual activity with non-human animals can be ethical?</label><br>
@@ -480,26 +501,14 @@
                         <label class="question" for="change-zeta-principles">What changes, if any, would you make to the Zeta Principles?</label><br>
                         <input type="text" id="change-zeta-principles" name="change-zeta-principles"><br><br>
 
-                        <label class="question" for="zoo-paraphilia">Do you consider being a zoo to be a paraphilia?</label><br>
-                        <input type="radio" id="yes" name="zoo-paraphilia" value="yes">
-                        <label>Yes</label><br>
-                        <input type="radio" id="no" name="zoo-paraphilia" value="no">
-                        <label>No</label><br>
-                        <input type="radio" id="other" name="zoo-paraphilia" value="other">
-                        <label>Other:</label>
-                        <input type="text" id="zoo-paraphilia-other-text" name="zoo-paraphilia-other" placeholder="Please specify" disabled><br><br>
-
-                        <label class="question" for="zoo-sexuality">Do you consider being a zoo to be a sexuality?</label><br>
-                        <input type="radio" id="yes" name="zoo-sexuality" value="yes">
-                        <label>Yes</label><br>
-                        <input type="radio" id="no" name="zoo-sexuality" value="no">
-                        <label>No</label><br>
-                        <input type="radio" id="other" name="zoo-sexuality" value="other">
-                        <label>Other:</label>
-                        <input type="text" id="zoo-sexuality-other-text" name="zoo-sexuality-other" placeholder="Please specify" disabled><br><br>
-
                         <label class="question" for="most-important-issue">What do you think the most important issue is for the zoo community to address?</label><br>
                         <input type="text" id="most-important-issue" name="most-important-issue"><br><br>
+
+                        <label class="question" for="primary-goal">What do you think the primary goal of the zoo community should be?</label><br>
+                        <input type="text" id="primary-goal" name="primary-goal"><br><br>
+
+                        <label class="question" for="feedback">How would you improve this census for next year?</label><br>
+                        <input type="text" id="feedback" name="feedback"><br><br>
 
                         <button type="submit" class="button">submit</button>
                     </form>
