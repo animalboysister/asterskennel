@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="aster's kennel!">
+  <meta property="og:title" content="2024 Zoo Census">
   <meta property="og:description" content="aster's home on the net!">
   <meta property="og:image" content="https://animalboysister.zoolandia.org/images/profilepic.png">
   <meta property="og:url" content="https://animalboysister.zoolandia.org">
@@ -11,7 +11,7 @@
   <meta name="twitter:title" content="aster's kennel!">
   <title>aster's kennel!</title>
   <link rel="icon" href="/favicon.ico">
-  <link href="censusstyle.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
 </head>
 <body>
     <div class="content">
@@ -61,47 +61,17 @@
                         <label class="question" for="location">What is your current country of residence?</label><br>
                         <input type="text" id="location" name="location"><br><br>
 
-                        <label class="question" for="relationship-status">What is your relationship status? (Select all that apply)</label><br>
-                        <input type="checkbox" id="single" name="relationship-status" value="single">
-                        <label>Single</label><br>
-                        <input type="checkbox" id="human-relationship" name="relationship-status" value="human-relationship">
-                        <label>In a relationship with a human</label><br>
-                        <input type="checkbox" id="non-human-relationship" name="relationship-status" value="non-human-relationship">
-                        <label>In a relationship with a non-human</label><br>
-                        <input type="checkbox" id="poly-human-relationship" name="relationship-status" value="poly-human-relationship">
-                        <label>In a relationship with multiple humans</label><br>
-                        <input type="checkbox" id="poly-non-human-relationship" name="relationship-status" value="poly-non-human-relationship">
-                        <label>In a relationship with multiple non-humans</label><br>
-                        <input type="checkbox" id="married" name="relationship-status" value="married">
-                        <label>Married</label><br>
-                        <input type="checkbox" id="divorced" name="relationship-status" value="divorced">
-                        <label>Divorced</label><br>
-                        <input type="checkbox" id="widowed" name="relationship-status" value="widowed">
-                        <label>Widowed</label><br>
-                        <input type="checkbox" id="other" name="relationship-status" value="other">
+                        <label class="question" for="pets">Do you currently live with or care for any non-human animals?</label><br>
+                        <input type="radio" id="yes" name="pets" value="yes">
+                        <label>Yes</label><br>
+                        <input type="radio" id="no" name="pets" value="no">
+                        <label>No</label><br>
+                        <input type="radio" id="other" name="pets" value="other">
                         <label>Other:</label>
-                        <input type="text" id="relationship-status-other-text" name="relationship-status-other" placeholder="Please specify" disabled><br><br>
+                        <input type="text" id="pets-other-text" name="pets-other" placeholder="Please specify" disabled><br><br>
 
-                        <label class="question" for="living-situation">Who do you currently live with? (Select all that apply)</label><br>
-                        <input type="checkbox" id="alone" name="living-situation" value="alone">
-                        <label>Alone</label><br>
-                        <input type="checkbox" id="parents" name="living-situation" value="family">
-                        <label>Parents</label><br>
-                        <input type="checkbox" id="children" name="living-situation" value="children">
-                        <label>Children</label><br>
-                        <input type="checkbox" id="pets" name="living-situation" value="pets">
-                        <label>Pets</label><br>
-                        <input type="checkbox" id="roommates" name="living-situation" value="roommates">
-                        <label>Roommates</label><br>
-                        <input type="checkbox" id="human-partner" name="living-situation" value="human-partner">
-                        <label>Human Partner</label><br>
-                        <input type="checkbox" id="non-human-partner" name="living-situation" value="non-human-partner">
-                        <label>Non-Human Partner</label><br>
-                        <input type="checkbox" id="spouse" name="living-situation" value="spouse">
-                        <label>Spouse</label><br>
-                        <input type="checkbox" id="other" name="living-situation" value="other">
-                        <label>Other:</label>
-                        <input type="text" id="living-situation-other-text" name="living-situation-other" placeholder="Please specify" disabled><br><br>
+                        <label class="question" for="pets-species">If you answered 'yes' to the previous question, what animals and how many?</label><br>
+                        <input type="text" id="pets-species" name="pets-species"><br><br>
 
                         <label class="question" for="education-level">What is your highest level of eduation?</label><br>
                         <input type="radio" id="below-high-school" name="education-level" value="below-high-school">
@@ -123,18 +93,20 @@
                         <input type="text" id="education-level-other-text" name="education-level-other" placeholder="Please specify" disabled><br><br>
 
                         <label class="question" for="income">How would you describe your current income level</label><br>
-                        <input type="radio" id="poverty" name="income" value="poverty">
-                        <label>Poverty</label><br>
-                        <input type="radio" id="lower-income" name="income" value="lower-income">
-                        <label>Lower Income</label><br>
-                        <input type="radio" id="lower-middle-income" name="income" value="lower-middle-income">
-                        <label>Lower-Middle Income</label><br>
-                        <input type="radio" id="middle-income" name="income" value="middle-income">
-                        <label>Middle Income</label><br>
-                        <input type="radio" id="upper-middle-income" name="income" value="upper-middle-income">
-                        <label>Upper-Middle Income</label><br>
-                        <input type="radio" id="upper-income" name="income" value="upper-income">
-                        <label>Upper Income</label><br>
+                        <input type="radio" id="bottom-10%" name="income" value="bottom-10%">
+                        <label>Bottom 10%</label><br>
+                        <input type="radio" id="bottom-20%" name="income" value="bottom-20%">
+                        <label>Bottom 20%</label><br>
+                        <input type="radio" id="bottom-40%" name="income" value="bottom-40%">
+                        <label>Bottom 40%</label><br>
+                        <input type="radio" id="median-income" name="income" value="median-income">
+                        <label>Median Income</label><br>
+                        <input type="radio" id="upper-40%" name="income" value="upper-40%">
+                        <label>Upper 40%</label><br>
+                        <input type="radio" id="upper-20%" name="income" value="upper-20%">
+                        <label>Upper 20%</label><br>
+                        <input type="radio" id="upper-10%" name="income" value="upper-10%">
+                        <label>Upper 10%</label><br>
                         <input type="radio" id="other" name="income" value="other">
                         <label>Other:</label>
                         <input type="text" id="income-other-text" name="income-other" placeholder="Please specify" disabled><br><br>
@@ -142,7 +114,7 @@
                         <label class="question" for="religion">What is your religious background?</label><br>
                         <input type="text" id="religion" name="religion"><br><br>
 
-                        <label class="question" for="political-views">What are your political views?</label><br>
+                        <label class="question" for="political-views">What labels would you use to describe yourself politically?</label><br>
                         <input type="text" id="political-views" name="political-views"><br><br>
 
                         <label class="question" for="mental-health">Have you ever been diagnosed with a mental health problem?</label><br>
@@ -232,6 +204,26 @@
                         <label>Other:</label>
                         <input type="text" id="non-human-sexual-orientation-other-text" name="non-human-sexual-orientation-other" placeholder="Please specify" disabled><br><br>
 
+                        <label class="question" for="relationship-status">What is your relationship status? (Select all that apply)</label><br>
+                        <input type="checkbox" id="single" name="relationship-status" value="single">
+                        <label>Single</label><br>
+                        <input type="checkbox" id="human-relationship" name="relationship-status" value="human-relationship">
+                        <label>In a relationship with a human</label><br>
+                        <input type="checkbox" id="non-human-relationship" name="relationship-status" value="non-human-relationship">
+                        <label>In a relationship with a non-human</label><br>
+                        <input type="checkbox" id="poly-human-relationship" name="relationship-status" value="poly-human-relationship">
+                        <label>In a relationship with multiple humans</label><br>
+                        <input type="checkbox" id="poly-non-human-relationship" name="relationship-status" value="poly-non-human-relationship">
+                        <label>In a relationship with multiple non-humans</label><br>
+                        <input type="checkbox" id="married" name="relationship-status" value="married">
+                        <label>Married</label><br>
+                        <input type="checkbox" id="divorced" name="relationship-status" value="divorced">
+                        <label>Divorced</label><br>
+                        <input type="checkbox" id="widowed" name="relationship-status" value="widowed">
+                        <label>Widowed</label><br>
+                        <input type="checkbox" id="other" name="relationship-status" value="other">
+                        <label>Other:</label>
+                        <input type="text" id="relationship-status-other-text" name="relationship-status-other" placeholder="Please specify" disabled><br><br>
 
                         <label class="question" for="term">What term do you prefer to use to describe your attraction to non-humans?</label><br>
                         <input type="radio" id="zoo" name="term" value="zoo">
