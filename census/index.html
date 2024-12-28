@@ -143,6 +143,32 @@
                         <label class="question" for="vegan-vegetarian-reason">If you answered 'yes' to previous question, why are you a vegan or vegetarian?</label><br>
                         <input type="text" id="vegan-vegetarian-reason" name="vegan-vegetarian-reason"><br><br>
 
+                        <label class="question" for="alcohol-use">Do you use alcohol for recreational purposes?</label><br>
+                        <input type="radio" id="never" name="alcohol-use" value="never">
+                        <label>Never</label><br>
+                        <input type="radio" id="rarely" name="alcohol-use" value="rarely">
+                        <label>Rarely</label><br>
+                        <input type="radio" id="occasionally" name="alcohol-use" value="occasionally">
+                        <label>Occasionally</label><br>
+                        <input type="radio" id="frequently" name="alcohol-use" value="frequently">
+                        <label>Frequently</label><br>
+                        <input type="radio" id="other" name="alcohol-use" value="other">
+                        <label>Other:</label>
+                        <input type="text" id="alcohol-use-other-text" name="alcohol-use-other" placeholder="Please specify" disabled><br><br>
+
+                        <label class="question" for="drug-use">Do you use drugs for recreational purposes?</label><br>
+                        <input type="radio" id="never" name="drug-use" value="never">
+                        <label>Never</label><br>
+                        <input type="radio" id="rarely" name="drug-use" value="rarely">
+                        <label>Rarely</label><br>
+                        <input type="radio" id="occasionally" name="drug-use" value="occasionally">
+                        <label>Occasionally</label><br>
+                        <input type="radio" id="frequently" name="drug-use" value="frequently">
+                        <label>Frequently</label><br>
+                        <input type="radio" id="other" name="drug-use" value="other">
+                        <label>Other:</label>
+                        <input type="text" id="drug-use-other-text" name="drug-use-other" placeholder="Please specify" disabled><br><br>
+
                         <label class="question" for="furry">Do you identify as a furry?</label><br>
                         <input type="radio" id="yes" name="furry" value="yes">
                         <label>Yes</label><br>
@@ -177,7 +203,7 @@
                         <input type="radio" id="3" name="life-satisfaction" value="3">
                         <label>Generally satisfied</label><br>
                         <input type="radio" id="2" name="life-satisfaction" value="2">
-                        <label>Sometimes unsatisfied</label><br>
+                        <label>Sometimes satisfied</label><br>
                         <input type="radio" id="1" name="life-satisfaction" value="1">
                         <label>Mostly unsatisfied</label><br><br>
 
@@ -196,49 +222,13 @@
                         <label class="question" for="non-human-sexual-orientation">What is your sexual orientation toward non-humans?</label><br>
                         <input type="radio" id="heterosexual" name="non-human-sexual-orientation" value="heterosexual">
                         <label>Heterosexual</label><br>
-                        <input type="radio" id="homosexual" name="non-human-sexual-orientation" value="homosexual"</label>
+                        <input type="radio" id="homosexual" name="non-human-sexual-orientation" value="homosexual">
                         <label>Homosexual</label><br>
                         <input type="radio" id="bisexual" name="non-human-sexual-orientation" value="bisexual">
                         <label>Bisexual</label><br>
                         <input type="radio" id="other" name="non-human-sexual-orientation" value="other">
                         <label>Other:</label>
                         <input type="text" id="non-human-sexual-orientation-other-text" name="non-human-sexual-orientation-other" placeholder="Please specify" disabled><br><br>
-
-                        <label class="question" for="relationship-status">What is your relationship status? (Select all that apply)</label><br>
-                        <input type="checkbox" id="single" name="relationship-status" value="single">
-                        <label>Single</label><br>
-                        <input type="checkbox" id="human-relationship" name="relationship-status" value="human-relationship">
-                        <label>In a relationship with a human</label><br>
-                        <input type="checkbox" id="non-human-relationship" name="relationship-status" value="non-human-relationship">
-                        <label>In a relationship with a non-human</label><br>
-                        <input type="checkbox" id="poly-human-relationship" name="relationship-status" value="poly-human-relationship">
-                        <label>In a relationship with multiple humans</label><br>
-                        <input type="checkbox" id="poly-non-human-relationship" name="relationship-status" value="poly-non-human-relationship">
-                        <label>In a relationship with multiple non-humans</label><br>
-                        <input type="checkbox" id="married" name="relationship-status" value="married">
-                        <label>Married</label><br>
-                        <input type="checkbox" id="divorced" name="relationship-status" value="divorced">
-                        <label>Divorced</label><br>
-                        <input type="checkbox" id="widowed" name="relationship-status" value="widowed">
-                        <label>Widowed</label><br>
-                        <input type="checkbox" id="other" name="relationship-status" value="other">
-                        <label>Other:</label>
-                        <input type="text" id="relationship-status-other-text" name="relationship-status-other" placeholder="Please specify" disabled><br><br>
-
-                        <label class="question" for="term">What term do you prefer to use to describe your attraction to non-humans?</label><br>
-                        <input type="radio" id="zoo" name="term" value="zoo">
-                        <label>Zoo</label><br>
-                        <input type="radio" id="zoophile" name="term" value="zoophile">
-                        <label>Zoophile</label><br>
-                        <input type="radio" id="zoosexual" name="term" value="zoosexual">
-                        <label>Zoosexual</label><br>
-                        <input type="radio" id="bestialist" name="term" value="bestialist">
-                        <label>Bestialist</label><br>
-                        <input type="radio" id="no-preference" name="term" value="no-preference">
-                        <label>No Preference</label><br>
-                        <input type="radio" id="other" name="term" value="other">
-                        <label>Other:</label>
-                        <input type="text" id="term-other-text" name="term-other" placeholder="Please specify" disabled><br><br>
 
                         <label class="question" for="sexually-zoo-exclusive">Are you sexually zoo-exclusive, i.e. not sexually attracted to humans?</label><br>
                         <input type="radio" id="yes" name="sexually-zoo-exclusive" value="yes">
@@ -258,11 +248,211 @@
                         <label>Other:</label>
                         <input type="text" id="romantically-zoo-exclusive-other-text" name="romantically-zoo-exclusive-other" placeholder="Please specify" disabled><br><br>
 
+                        <label class="question" for="relationship-status">What is your relationship status? (Select all that apply)</label><br>
+                        <input type="checkbox" id="single" name="relationship-status" value="single">
+                        <label>Single</label><br>
+                        <input type="checkbox" id="human-relationship" name="relationship-status" value="human-relationship">
+                        <label>In a relationship with a human</label><br>
+                        <input type="checkbox" id="non-human-relationship" name="relationship-status" value="non-human-relationship">
+                        <label>In a relationship with a non-human</label><br>
+                        <input type="checkbox" id="poly-human-relationship" name="relationship-status" value="poly-human-relationship">
+                        <label>In an relationship with multiple humans</label><br>
+                        <input type="checkbox" id="poly-non-human-relationship" name="relationship-status" value="poly-non-human-relationship">
+                        <label>In a relationship with multiple non-humans</label><br>
+                        <input type="checkbox" id="married" name="relationship-status" value="married">
+                        <label>Married</label><br>
+                        <input type="checkbox" id="divorced" name="relationship-status" value="divorced">
+                        <label>Divorced</label><br>
+                        <input type="checkbox" id="widowed" name="relationship-status" value="widowed">
+                        <label>Widowed</label><br>
+                        <input type="checkbox" id="other" name="relationship-status" value="other">
+                        <label>Other:</label>
+                        <input type="text" id="relationship-status-other-text" name="relationship-status-other" placeholder="Please specify" disabled><br><br>
+
+                        <label class="question" for="relatinoship-satisfaction">How satisfied are you in your current relationship(s)?</label><br>
+                        <input type="radio" id="5" name="relationship-satisfaction" value="5">
+                        <label>Extremely satisfied</label><br>
+                        <input type="radio" id="4" name="relationship-satisfaction" value="4">
+                        <label>Very satisfied</label><br>
+                        <input type="radio" id="3" name="relationship-satisfaction" value="3">
+                        <label>Generally satisfied</label><br>
+                        <input type="radio" id="2" name="relationship-satisfaction" value="2">
+                        <label>Sometimes satisfied</label><br>
+                        <input type="radio" id="1" name="relationship-satisfaction" value="1">
+                        <label>Mostly unsatisfied</label><br><br>
+                        
                         <label class="question" for="primary-species-attraction">What is your primary species of attraction?</label><br>
                         <input type="text" id="primary-species-attraction" name="primary-species-attraction"><br><br>
 
-                        <label class="question" for="other-species-attraction">What species aside from your primary species of attraction are you attracted to?</label><br>
+                        <label class="question" for="other-species-attraction">Aside from your primary species of attraction, what species are you attracted to?</label><br>
                         <input type="text" id="other-species-attraction" name="other-species-attraction"><br><br>
+
+                        <label class="question" for="awakening=age">At what age did you first have sexual or romantic feelings towards a non-human animal?</label><br>
+                        <input type="text" id="awakening=age" name="awakening=age"><br><br>
+
+                        <label class="question" for="awakening=age">At what age did you first identify yourself as a zoo?</label><br>
+                        <input type="text" id="awakening=age" name="awakening=age"><br><br>
+
+                        <label class="question" for="practising">Have you ever engaged in sexual activity with a non-human animal?</label><br>
+                        <input type="radio" id="yes" name="practising" value="yes">
+                        <label>Yes</label><br>
+                        <input type="radio" id="no" name="practising" value="no">
+                        <label>No</label><br>
+                        <input type="radio" id="other" name="practising" value="other">
+                        <label>Other:</label>
+                        <input type="text" id="practising-other-text" name="practising-other" placeholder="Please specify" disabled><br><br>
+
+                        <label class="question" for="paraphilias">Not including being a zoo, what paraphilias do you have?</label><br>
+                        <input type="text" id="paraphilias" name="paraphilias"><br><br>
+
+                        <h3>About The Community</h3>
+                        <label class="question" for="community">Do you consider yourself part of the zoo community?</label><br>
+                        <input type="radio" id="yes" name="community" value="yes">
+                        <label>Yes</label><br>
+                        <input type="radio" id="no" name="community" value="no">
+                        <label>No</label><br>
+                        <input type="radio" id="other" name="community" value="other">
+                        <label>Other:</label>
+                        <input type="text" id="community-other-text" name="community-other" placeholder="Please specify" disabled><br><br>
+
+                        <label class="question" for="community-age">At what age did you first become aware of the zoo community?</label><br>
+                        <input type="text" id="community-age" name="community-age"><br><br>
+
+                        <label class="question" for="community-acceptance">How accepted do you feel within the zoo community?</label><br>
+                        <input type="radio" id="5" name="community-acceptance" value="5">
+                        <label>Extremely accepted</label><br>
+                        <input type="radio" id="4" name="community-acceptance" value="4">
+                        <label>Very accepted</label><br>
+                        <input type="radio" id="3" name="community-acceptance" value="3">
+                        <label>Generally accepted</label><br>
+                        <input type="radio" id="2" name="community-acceptance" value="2">
+                        <label>Sometimes accepted</label><br>
+                        <input type="radio" id="1" name="community-acceptance" value="1">
+                        <label>Mostly unaccepted</label><br><br>
+
+                        <label class="question" for="community-activity">How active are you in the zoo community?</label><br>
+                        <input type="radio" id="5" name="community-activity" value="5">
+                        <label>Extremely active</label><br>
+                        <input type="radio" id="4" name="community-activity" value="4">
+                        <label>Very active</label><br>
+                        <input type="radio" id="3" name="community-activity" value="3">
+                        <label>Generally active</label><br>
+                        <input type="radio" id="2" name="community-activity" value="2">
+                        <label>Sometimes active</label><br>
+                        <input type="radio" id="1" name="community-activity" value="1">
+                        <label>Mostly inactive</label><br><br>
+
+                        <label class="question" for="community-website">What platforms do you use to connect with the zoo community? (Select all that apply)</label><br>
+                        <input type="checkbox" id="twitter" name="community-website" value="twitter">
+                        <label>Twitter</label><br>
+                        <input type="checkbox" id="telegram" name="community-website" value="telegram">
+                        <label>Telegram</label><br>
+                        <input type="checkbox" id="discord" name="community-website" value="discord">
+                        <label>Discord</label><br>
+                        <input type="checkbox" id="reddit" name="community-website" value="reddit">
+                        <label>Reddit</label><br>
+                        <input type="checkbox" id="zooville" name="community-website" value="zooville">
+                        <label>Zooville Forums</label><br>
+                        <input type="checkbox" id="zoo-community" name="community-website" value="zoo-community">
+                        <label>Zoo Community Forums</label><br>
+                        <input type="checkbox" id="zoocadia" name="community-website" value="zoocadia">
+                        <label>Zoocadia Forums</label><br>
+                        <input type="checkbox" id="other" name="community-website" value="other">
+                        <label>Other:</label>
+                        <input type="text" id="community-website-other-text" name="community-website-other" placeholder="Please specify" disabled><br><br>
+
+                        <label class="question" for="term">What term do you prefer to use to describe your attraction to non-humans?</label><br>
+                        <input type="radio" id="zoo" name="term" value="zoo">
+                        <label>Zoo</label><br>
+                        <input type="radio" id="zoophile" name="term" value="zoophile">
+                        <label>Zoophile</label><br>
+                        <input type="radio" id="zoosexual" name="term" value="zoosexual">
+                        <label>Zoosexual</label><br>
+                        <input type="radio" id="bestialist" name="term" value="bestialist">
+                        <label>Bestialist</label><br>
+                        <input type="radio" id="no-preference" name="term" value="no-preference">
+                        <label>No Preference</label><br>
+                        <input type="radio" id="other" name="term" value="other">
+                        <label>Other:</label>
+                        <input type="text" id="term-other-text" name="term-other" placeholder="Please specify" disabled><br><br>
+
+                        <label class="question" for="zoo-acceptance">Do you think that being a zoo will ever be accepted by society at large?</label><br>
+                        <input type="radio" id="yes" name="zoo-acceptance" value="yes">
+                        <label>Yes</label><br>
+                        <input type="radio" id="no" name="zoo-acceptance" value="no">
+                        <label>No</label><br>
+                        <input type="radio" id="other" name="zoo-acceptance" value="other">
+                        <label>Other:</label>
+                        <input type="text" id="zoo-acceptance-other-text" name="zoo-acceptance-other" placeholder="Please specify" disabled><br><br>
+
+                        <label class="question" for="zoo-pals">Do you know any other zoos in real life?</label><br>
+                        <input type="radio" id="yes" name="zoo-pals" value="yes">
+                        <label>Yes</label><br>
+                        <input type="radio" id="no" name="zoo-pals" value="no">
+                        <label>No</label><br>
+                        <input type="radio" id="other" name="zoo-pals" value="other">
+                        <label>Other:</label>
+                        <input type="text" id="zoo-pals-other-text" name="zoo-pals-other" placeholder="Please specify" disabled><br><br>
+
+                        <label class="question" for="out-as-zoo">Have you come out as a zoo to anyone in your life? (Select all that apply)</label><br>
+                        <input type="checkbox" id="family" name="out-as-zoo" value="family">
+                        <label>Family</label><br>
+                        <input type="checkbox" id="friends" name="out-as-zoo" value="friends">
+                        <label>Friends</label><br>
+                        <input type="checkbox" id="partner" name="out-as-zoo" value="partner">
+                        <label>Partner</label><br>
+                        <input type="checkbox" id="coworkers" name="out-as-zoo" value="coworkers">
+                        <label>Coworkers</label><br>
+                        <input type="checkbox" id="medical-professional" name="out-as-zoo" value="medical-professional">
+                        <label>Medical Professional</label><br>
+                        <input type="checkbox" id="other" name="out-as-zoo" value="other">
+                        <label>Other:</label>
+                        <input type="text" id="out-as-zoo-other-text" name="out-as-zoo-other" placeholder="Please specify" disabled><br><br>
+
+                        <label class="question" for="out-as-zoo-reaction">How did the people you came out to react to you being a zoo?</label><br>
+                        <input type="text" id="out-as-zoo-reaction" name="out-as-zoo-reaction"><br><br>
+
+                        <label class="question" for="ethical">Do you think that sexual activity with non-human animals can be ethical?</label><br>
+                        <input type="radio" id="yes" name="ethical" value="yes">
+                        <label>Yes</label><br>
+                        <input type="radio" id="no" name="ethical" value="no">
+                        <label>No</label><br>
+                        <input type="radio" id="other" name="ethical" value="other">
+                        <label>Other:</label>
+                        <input type="text" id="ethical-other-text" name="ethical-other" placeholder="Please specify" disabled><br><br>
+
+                        <label class="question" for="pornography-ethical">Do you think that pornography involving sexual activity with non-human animals can be ethical?</label><br>
+                        <input type="radio" id="yes" name="pornography-ethical" value="yes">
+                        <label>Yes</label><br>
+                        <input type="radio" id="no" name="pornography-ethical" value="no">
+                        <label>No</label><br>
+                        <input type="radio" id="other" name="pornography-ethical" value="other">
+                        <label>Other:</label>
+                        <input type="text" id="pornography-ethical-other-text" name="pornography-ethical-other" placeholder="Please specify" disabled><br><br>
+
+                        <label class="question" for="zeta">Are you familiar with the Zeta Principles?</label><br>
+                        <input type="radio" id="yes" name="zeta" value="yes">
+                        <label>Yes</label><br>
+                        <input type="radio" id="no" name="zeta" value="no">
+                        <label>No</label><br>
+                        <input type="radio" id="other" name="zeta" value="other">
+                        <label>Other:</label>
+                        <input type="text" id="zeta-other-text" name="zeta-other" placeholder="Please specify" disabled><br><br>
+
+                        <label class="question" for="zeta-principles">Do you generally agree with the Zeta Principles?</label><br>
+                        <input type="radio" id="yes" name="zeta-principles" value="yes">
+                        <label>Yes</label><br>
+                        <input type="radio" id="no" name="zeta-principles" value="no">
+                        <label>No</label><br>
+                        <input type="radio" id="other" name="zeta-principles" value="other">
+                        <label>Other:</label>
+                        <input type="text" id="zeta-principles-other-text" name="zeta-principles-other" placeholder="Please specify" disabled><br><br>
+
+                        <label class="question" for="change-zeta-principles">What changes, if any, would you make to the Zeta Principles?</label><br>
+                        <input type="text" id="change-zeta-principles" name="change-zeta-principles"><br><br>
+
+                        <label class="question" for="zoo-paraphilia">Do you consider being a zoo to be a paraphilia? Why or why not?</label><br>
+                        <input type="text" id="zoo-paraphilia" name="zoo-paraphilia"><br><br>
 
                         <button type="submit" class="button">submit</button>
                     </form>
