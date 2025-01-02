@@ -227,20 +227,20 @@ ul, ol {
 .controls {
 	display: flex;
 	justify-content: center;
-	gap: 10px;
-	padding: 0 5px;
 }
 
 #brushSize {
 	height: 24px;
 	width: 100px;
 	cursor: url("images/cursorhover.png"), auto;
+	padding: 0 5px;
 }
 
 #brushColor {
 	height: 24px;
 	width: 24px;
 	cursor: url("images/cursorhover.png"), auto;
+	padding: 0 5px;
 }
 
 #message {
