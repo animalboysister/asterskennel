@@ -79,7 +79,57 @@
 					</div>
 					<div class="title-bar-buttons">
 						<span class="title-bar-button">_</span>
-						<span class="title-bar-button">✦</span>
+						<span id="myButton" class="title-bar-button">✦</span>
+						<div id="myPopup" class="popup">
+							<div class="popup-content">
+								<div class="window">
+									<div class="title-bar">
+										<div class="title-bar-left-aligned">
+											<img src="images/gsd.gif" class="title-bar-icon">
+											<span class="title-bar-title">i like dogs much better!<span>
+										</div>
+										<div class="title-bar-buttons">
+											<span id="closePopup" class="title-bar-button">✕</span>
+										</div>
+									</div>
+									<div class="workspace">
+										<p>
+											you've discovered my secret button! are you 18+?
+										</p>
+										<div class="horizontal centered">
+											<a href="https://drive.google.com/drive/folders/1_TtK6-ipTbANdSwUPjvMmaq6zVo8MqAK">yes!</a>
+											<a href="/">naur...</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<script>
+							myButton.addEventListener(
+								"click",
+								function () {
+									myPopup.classList.add("show");
+								}
+							);
+							closePopup.addEventListener(
+								"click",
+								function () {
+									myPopup.classList.remove(
+										"show"
+									);
+								}
+							);
+							window.addEventListener(
+								"click",
+								function (event) {
+									if (event.target == myPopup) {
+										myPopup.classList.remove(
+											"show"
+										);
+									}
+								}
+							);
+						</script>
 						<span class="title-bar-button">✕</span>
 					</div>
 				</div>
