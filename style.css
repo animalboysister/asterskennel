@@ -145,7 +145,6 @@ ul, ol {
 .menu-bar {
 	background-color: #b99885;
 	margin: 2px;
-	padding: 5px 10px;
 	border-top: 1px solid #ffe5e0;
 	border-right: 1px solid #000000;
 	border-left: 1px solid #ffe5e0;
@@ -153,8 +152,7 @@ ul, ol {
 	list-style-type: none;
 	display: flex;
 	align-items: center;
-	font-size: 18px;
-	gap: 10px;
+	padding: 0px;
 }
 
 .menu-bar-item {
@@ -162,6 +160,8 @@ ul, ol {
 	color: #000000;
 	text-decoration: none;
 	border: 1px solid transparent;
+	padding: 0px 5px;
+	margin: 0;
 }
 
 .menu-bar-item.active {
