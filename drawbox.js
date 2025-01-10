@@ -35,6 +35,12 @@ function resizeCanvas() {
   canvasScale.y = canvas.height / height;
 }
 
+// Fill canvas with white when the page loads
+function fillCanvasWithWhite() {
+  ctx.fillStyle = 'white';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+}
+
 // Save the current state of the canvas
 function saveState() {
   if (canvasHistory.length >= maxHistory) {
@@ -127,6 +133,9 @@ window.addEventListener('resize', resizeCanvas);
 
 // Initialize canvas size
 resizeCanvas();
+
+// Fill the canvas with white on load
+fillCanvasWithWhite();
 
 // Undo button event listener
 undoButton.addEventListener('click', undo);
